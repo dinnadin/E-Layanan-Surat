@@ -1,0 +1,281 @@
+/* ============================================
+   AREA UTAMA
+   ============================================ */
+.report-page {
+    background: #ffffff;
+    padding: 20px 30px 60px;
+    min-height: 70vh;
+    overflow-x: hidden;
+}
+
+/* Judul Halaman */
+.report-title {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 10px 0 20px;
+    color: #111;
+}
+
+/* Wrapper Scroll Horizontal */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: visible;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 0;
+}
+
+/* ============================================
+   TABEL UTAMA
+   ============================================ */
+.table-custom {
+    width: 100%;
+    margin: 0 auto;
+    background: #ffffff;
+    border-collapse: collapse;
+    box-shadow: none;
+    table-layout: auto;
+}
+
+.table-custom thead th {
+    border: 1px solid #d8d2d2;
+    padding: 10px 8px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 600;
+    color: #fff;
+    background: #2b2e77;
+}
+
+.table-custom tbody td {
+    border: 1px solid #d8d2d2;
+    padding: 12px 8px;
+    vertical-align: middle;
+    white-space: normal;
+    word-break: break-word;
+}
+
+/* Lebar Kolom */
+.col-no { width: 5%; text-align: center; }
+.col-nama { width: 20%; }
+.col-nip { width: 18%; text-align: center; }
+.col-pangkat { width: 20%; text-align: center; }
+.col-jabatan { width: 18%; }
+.col-aksi { width: 10%; text-align: center; }
+
+/* Tombol Aksi */
+.btn-detail {
+    display: inline-block;
+    padding: 6px 9px;
+    font-size: 12px;
+    border-radius: 4px;
+    background: linear-gradient(145deg, #372a64 0%, #3d3892 50%, #202d4d 100%);
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.btn-detail:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 6px 18px rgba(26, 26, 26, 0.25);
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    padding-left: 0;
+    margin: 20px 0 0;
+    flex-wrap: wrap;
+}
+
+.pagination li {
+    margin: 0 4px;
+}
+
+.pagination .page-link {
+    display: block;
+    padding: 6px 12px;
+    color: #6f42c1;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #6f42c1;
+    color: #fff;
+    border-color: #6f42c1;
+}
+
+.pagination .page-item.disabled .page-link {
+    color: #6c757d;
+    pointer-events: none;
+    background-color: #f8f9fa;
+    border-color: #dee2e6;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* HP kecil (≤480px) */
+@media (max-width: 480px) {
+    .report-page { padding: 10px 8px 40px; }
+    .report-title { font-size: 16px; letter-spacing: 0.5px; margin: 5px 0 12px; }
+
+    .table-wrapper {
+        margin: 0 -8px 15px;
+        padding: 0 8px;
+        overflow-x: auto;
+    }
+
+    .table-custom {
+        min-width: 700px;
+        font-size: 11px;
+    }
+
+    .table-custom thead th, .table-custom tbody td {
+        padding: 8px 6px;
+    }
+
+    .btn-detail {
+        padding: 5px 7px;
+        font-size: 11px;
+    }
+
+    .pagination {
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    .pagination .page-link {
+        padding: 5px 9px;
+        font-size: 12px;
+    }
+}
+
+/* HP besar / Tablet kecil (481–767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+    .report-page { padding: 12px 15px 45px; }
+    .report-title { font-size: 18px; }
+
+    .table-custom { min-width: 750px; font-size: 12px; }
+    .table-custom thead th, .table-custom tbody td { padding: 9px 7px; }
+
+    .btn-detail { font-size: 11px; }
+    .pagination { justify-content: center; }
+}
+
+/* Tablet (768–1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .report-page { padding: 15px 20px 50px; }
+    .report-title { font-size: 20px; }
+
+    .table-custom { font-size: 13px; }
+    .table-custom thead th, .table-custom tbody td { padding: 10px 7px; }
+
+    .btn-detail { font-size: 12px; }
+}
+
+/* Laptop layar separuh (1025–1280px) */
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .report-page { padding: 18px 25px 55px; }
+    .report-title { font-size: 20px; }
+
+    .table-custom { font-size: 13px; }
+    .table-custom thead th, .table-custom tbody td { padding: 9px 7px; }
+}
+
+/* Laptop normal hingga desktop (1281–1440px) */
+@media (min-width: 1281px) and (max-width: 1440px) {
+    .report-page {
+        padding: 20px 30px 60px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+/* Desktop besar (≥1441px) */
+@media (min-width: 1441px) {
+    .report-page {
+        padding: 25px 40px 70px;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .report-title { font-size: 24px; }
+
+    .table-custom thead th, .table-custom tbody td {
+        padding: 12px 10px;
+        font-size: 14px;
+    }
+}
+
+/* Orientasi Landscape HP */
+@media (max-height: 500px) and (orientation: landscape) {
+    .report-page { padding: 8px 10px 25px; }
+    .report-title { font-size: 14px; margin: 3px 0 10px; }
+    .table-custom { min-width: 700px; font-size: 11px; }
+    .table-custom th, .table-custom td { padding: 6px 4px; }
+}
+/* ✅ Fix tabel bisa di-scroll horizontal di HP */
+@media screen and (max-width: 768px) {
+    /* Pastikan wadah tabel dapat di-scroll */
+    .table-wrapper,
+    .table-responsive,
+    .table-container {
+        width: 100%;
+        overflow-x: auto !important;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        display: block !important;
+    }
+
+    /* Pastikan tabel tidak terpotong */
+    table,
+    .custom-table {
+        min-width: 700px !important;
+        width: max-content !important;
+    }
+
+    /* Sedikit rapikan tampilan tabel kecil */
+    .custom-table th,
+    .custom-table td {
+        white-space: nowrap !important;
+        font-size: 10px !important;
+        padding: 6px 8px !important;
+    }
+}
+
+/* === Search Input Style === */
+.search-wrapper {
+    position: relative;
+    flex: 1; /* biar bisa meluas mengikuti container */
+    max-width: 1000px; /* kamu bisa ubah ke 500px atau 600px kalau mau lebih panjang */
+    width: 100%;
+}
+
+.search-wrapper input {
+    width: 100%;
+    padding: 8px 12px 8px 35px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    height: 38px;
+    font-size: 14px;
+}
+
+.search-wrapper i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+}

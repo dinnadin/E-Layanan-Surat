@@ -1,0 +1,246 @@
+/* === Container utama === */
+.container {
+    max-width: 100%;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+/* === Konten utama === */
+.content-riwayat {
+    margin-left: 25px;
+    margin-top: -30px;
+    overflow-y: visible; /* biar tidak terpotong saat scroll */
+    max-height: none;    /* hilangkan batas tinggi */
+}
+
+/* === Judul === */
+.judul-riwayat {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #000000ff;
+    margin-bottom: 15px;
+}
+
+/* === Tabel === */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+/* === Kolom === */
+.col-no { width: 5%; text-align: center; }
+.col-nomor { width: 15%; text-align: center; }
+.col-jenis { width: 13%; text-align: center; }
+.col-tgl-pengajuan { width: 13%; text-align: center; }
+.col-tgl-disetujui { width: 13%; text-align: center; }
+.col-keterangan { width: 25%; text-align: center; }
+.col-aksi { width: 13%; text-align: center; }
+
+/* === Cell tabel === */
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    text-align: center;
+    vertical-align: middle;
+    word-wrap: break-word;
+}
+
+/* === Header tabel === */
+table thead {
+    background: #2b2e77 !important;
+    color: #fff !important;
+}
+
+/* === Warna baris genap === */
+table tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+/* === Header tabel sticky === */
+table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 6;
+    background: #2b2e77;
+    color: #fff;
+}
+
+/* === Bungkus tabel === */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto !important; /* biar tidak potong saat layar kecil */
+    overflow-y: visible !important;
+    max-height: none !important;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* === Pagination === */
+.pagination {
+    list-style: none;
+    display: flex;
+    gap: 6px;
+    justify-content: flex-end;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.pagination li {
+    display: inline-block;
+}
+
+.pagination li a,
+.pagination li.active span,
+.pagination li.disabled span {
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+    min-width: 20px;
+    display: inline-block;
+}
+
+.pagination li a {
+    color: #6f42c1;
+}
+
+.pagination li.active span {
+    font-weight: bold;
+    color: white;
+    background: #6f42c1;
+    border: 1px solid #6c4c93;
+}
+
+.pagination li.disabled span {
+    color: #aaa;
+    border: 1px solid #ccc;
+}
+
+/* === Tombol Filter === */
+.btn-filter {
+    background-color: #e0e0e0 !important;
+    color: #000 !important;
+    border: 1px solid #bbb !important;
+    border-radius: 4px !important;
+    height: 38px;
+    padding: 8px 24px !important;
+}
+
+.btn-filter:hover {
+    background-color: #c9c9c9 !important;
+    color: #000 !important;
+}
+
+/* === Dropdown Bulan & Tahun === */
+.filter-select {
+    background-color: #fcfcfcff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 4px 2px;
+    font-size: 14px;
+    height: 38px;
+    min-width: 100px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.filter-select:focus {
+    border-color: #c2bfbfff;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(130, 130, 130, 0.2);
+}
+
+/* === Untuk layout Kepala === */
+.layout-kepala .judul-riwayat {
+    margin-top: 45px;
+}
+
+.content-riwayat.layout-kepala {
+    position: relative;
+    left: -30px;
+}
+
+/* === Tombol Lihat Detail === */
+.btn-lihat-detail {
+    background: linear-gradient(
+        145deg,
+        rgba(55, 42, 100, 0.95) 0%,
+        rgba(61, 56, 146, 0.92) 50%,
+        rgba(32, 45, 77, 0.9) 100%
+    ) !important;
+    color: #fff !important;
+    border: none !important;
+    border-radius: 6px !important;
+    padding: 4px 8px !important;
+    transition: 0.3s ease-in-out;
+    font-size: 11px !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+}
+
+.btn-lihat-detail:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 14px 32px rgba(26, 26, 26, 0.25);
+}
+
+/* === Filter container === */
+.mb-3.d-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.mb-3.d-flex > * {
+    flex-shrink: 0;
+}
+
+/* === Responsif === */
+@media screen and (max-width: 1200px) {
+    .content-riwayat {
+        margin: 0 15px;
+        overflow-x: auto;
+    }
+
+    table {
+        font-size: 14px;
+        min-width: 900px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .judul-riwayat {
+        font-size: 1.3rem;
+        text-align: left;
+    }
+
+    table {
+        font-size: 12px;
+        min-width: 800px;
+    }
+
+    table th, table td {
+        padding: 6px 8px;
+    }
+
+    .pagination {
+        justify-content: right;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .judul-riwayat {
+        font-size: 1.1rem;
+    }
+
+    table {
+        font-size: 11px;
+        min-width: 700px;
+    }
+
+    table th, table td {
+        padding: 4px 6px;
+    }
+}

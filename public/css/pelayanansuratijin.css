@@ -1,0 +1,624 @@
+/* === AREA UTAMA HALAMAN === */
+.report-page {
+    background: #ffffff;
+    padding: 20px 30px 60px;
+    min-height: 70vh;
+    overflow-x: auto;
+}
+
+/* === JUDUL HALAMAN === */
+.report-title {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 10px 0 25px;
+    color: #111;
+}
+
+/* === TABEL UTAMA === */
+.table-custom {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+    margin: 0 auto;
+    background: #ffffff;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+/* === HEADER === */
+.table-custom thead th {
+    border: 1px solid #d8d2d2;
+    padding: 10px 8px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 600;
+    background: #2b2e77;
+    color: #ffffff;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+/* === ISI TABEL === */
+.table-custom tbody td {
+    border: 1px solid #d8d2d2;
+    padding: 12px 8px;
+    vertical-align: middle;
+    white-space: normal;
+    word-break: break-word;
+    font-size: 14px;
+}
+
+/* Kolom-kolom */
+.col-no { width: 5%; text-align: center; }
+.col-nama { width: 20%; text-align: center;}
+.col-nip { width: 23%; text-align: center; }
+.col-pangkat { width: 20%; text-align: center; }
+.col-jabatan { width: 18%; text-align: center; }
+.col-aksi { width: 10%; text-align: center; }
+
+/* === TOMBOL AKSI === */
+.btn-detail {
+    display: inline-block;
+    padding: 6px 8px;
+    font-size: 12px;
+    border-radius: 6px;
+    background: linear-gradient(
+        145deg,
+        rgba(55, 42, 100, 0.95) 0%,
+        rgba(61, 56, 146, 0.92) 50%,
+        rgba(32, 45, 77, 0.9) 100%
+    );
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.btn-detail:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 10px 24px rgba(26, 26, 26, 0.25);
+}
+
+.btn-delete {
+    display: inline-block;
+    padding: 6px 9px;
+    font-size: 12px;
+    border-radius: 6px;
+    background: #d9534f;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    margin-left: 6px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.btn-delete:hover {
+    background: #b52b27;
+    transform: translateY(-2px);
+}
+
+/* === Search Input Style === */
+.search-wrapper {
+    position: relative;
+    flex: 1; /* biar bisa meluas mengikuti container */
+    max-width: 1000px; /* kamu bisa ubah ke 500px atau 600px kalau mau lebih panjang */
+    width: 100%;
+}
+
+.search-wrapper input {
+    width: 100%;
+    padding: 8px 12px 8px 35px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    height: 38px;
+    font-size: 14px;
+}
+
+.search-wrapper i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN - Semua Device
+   ========================================================= */
+
+/* Desktop Extra Large (≥1920px) */
+@media screen and (min-width: 1920px) {
+    .report-page {
+        padding: 25px 40px 70px;
+    }
+
+    .report-title {
+        font-size: 26px;
+        letter-spacing: 3px;
+        margin: 15px 0 30px;
+    }
+
+    .table-custom {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .table-custom thead th,
+    .table-custom tbody td {
+        padding: 14px 10px;
+        font-size: 15px;
+    }
+
+    .btn-detail,
+    .btn-delete {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+}
+
+/* Desktop Large (1440px - 1919px) */
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
+    .report-page {
+        padding: 22px 35px 65px;
+    }
+
+    .report-title {
+        font-size: 24px;
+        letter-spacing: 2.5px;
+        margin: 12px 0 28px;
+    }
+
+    .table-custom {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .table-custom thead th,
+    .table-custom tbody td {
+        padding: 12px 9px;
+        font-size: 14px;
+    }
+
+    .btn-detail,
+    .btn-delete {
+        padding: 7px 9px;
+        font-size: 12px;
+    }
+}
+
+/* Desktop Standard (1200px - 1439px) */
+@media screen and (min-width: 1200px) and (max-width: 1439px) {
+    .report-page {
+        padding: 20px 30px 60px;
+    }
+
+    .report-title {
+        font-size: 22px;
+    }
+
+    .table-custom {
+        width: 100%;
+        font-size: 13px;
+    }
+
+    .table-custom thead th,
+    .table-custom tbody td {
+        padding: 10px 8px;
+        font-size: 13px;
+    }
+
+    .btn-detail,
+    .btn-delete {
+        padding: 6px 8px;
+        font-size: 11px;
+    }
+}
+
+/* Laptop Separuh (1000px - 1199px) */
+@media screen and (min-width: 1000px) and (max-width: 1199px) {
+    .report-page {
+        padding: 18px 25px 55px;
+    }
+
+    .report-title {
+        font-size: 20px;
+        letter-spacing: 1.5px;
+        margin: 10px 0 22px;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        width: 100%;
+        margin: 0 0 15px 0;
+        border-radius: 6px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .table-custom {
+        width: 100%;
+        font-size: 12px;
+        min-width: 900px;
+    }
+
+    .table-custom thead th,
+    .table-custom tbody td {
+        padding: 9px 6px;
+        font-size: 12px;
+    }
+
+    .btn-detail,
+    .btn-delete {
+        padding: 5px 6px;
+        font-size: 10px;
+    }
+
+    .btn-delete {
+        margin-left: 4px;
+    }
+}
+
+/* Tablet Landscape (850px - 999px) */
+@media screen and (min-width: 850px) and (max-width: 999px) {
+    .report-page {
+        padding: 16px 20px 50px;
+    }
+
+    .report-title {
+        font-size: 18px;
+        letter-spacing: 1px;
+        margin: 8px 0 20px;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        width: 100%;
+        margin: 0 0 15px 0;
+        border-radius: 6px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .table-custom {
+        width: 100%;
+        font-size: 11px;
+        min-width: 850px;
+    }
+
+    .table-custom thead th,
+    .table-custom tbody td {
+        padding: 8px 5px;
+        font-size: 11px;
+    }
+
+    .btn-detail,
+    .btn-delete {
+        padding: 4px 5px;
+        font-size: 9px;
+    }
+
+    .btn-delete {
+        margin-left: 3px;
+    }
+}
+
+/* Tablet Besar (769px - 849px) */
+@media screen and (min-width: 769px) and (max-width: 849px) {
+    .report-page {
+        padding: 14px 16px 45px;
+    }
+
+    .report-title {
+        font-size: 17px;
+        letter-spacing: 0.8px;
+        margin: 8px 0 18px;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        width: 100%;
+        margin: 0 0 12px 0;
+        border-radius: 6px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .table-custom {
+        width: 100%;
+        font-size: 11px;
+        min-width: 800px;
+    }
+
+    .table-custom thead th,
+    .table-custom tbody td {
+        padding: 7px 5px;
+        font-size: 10px;
+    }
+
+    .btn-detail,
+    .btn-delete {
+        padding: 4px 5px;
+        font-size: 8px;
+    }
+
+    .btn-delete {
+        margin-left: 2px;
+    }
+}
+
+/* Tablet Portrait (577px - 768px) */
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    .report-page {
+        padding: 12px 14px 40px;
+    }
+
+    .report-title {
+        font-size: 16px;
+        letter-spacing: 0.5px;
+        margin: 6px 0 16px;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        width: 100%;
+        margin: 0 0 12px 0;
+        border-radius: 6px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .table-custom {
+        width: 100%;
+        font-size: 10px;
+        min-width: 750px;
+    }
+
+    .table-custom thead th,
+    .table-custom tbody td {
+        padding: 6px 4px;
+        font-size: 9px;
+    }
+
+    .btn-detail,
+    .btn-delete {
+        padding: 3px 4px;
+        font-size: 7px;
+    }
+
+    .btn-delete {
+        margin-left: 2px;
+    }
+}
+
+/* Mobile Besar (481px - 576px) */
+@media screen and (min-width: 481px) and (max-width: 576px) {
+    .report-page {
+        padding: 16px 18px 45px;
+    }
+
+    .report-title {
+        font-size: 20px;
+        letter-spacing: 1.5px;
+        margin: 10px 0 22px;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        width: 100%;
+        margin: 0 0 15px 0;
+        border-radius: 6px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .table-custom {
+        width: 100%;
+        font-size: 14px;
+        min-width: 900px;
+    }
+
+    .table-custom thead th,
+    .table-custom tbody td {
+        padding: 12px 10px;
+        font-size: 13px;
+    }
+
+    .btn-detail,
+    .btn-delete {
+        padding: 7px 9px;
+        font-size: 12px;
+    }
+
+    .btn-delete {
+        margin-left: 4px;
+    }
+}
+
+/* Mobile Standar (400px - 480px) */
+@media screen and (min-width: 400px) and (max-width: 480px) {
+    .report-page {
+        padding: 14px 16px 42px;
+    }
+
+    .report-title {
+        font-size: 18px;
+        letter-spacing: 1px;
+        margin: 8px 0 20px;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        width: 100%;
+        margin: 0 0 14px 0;
+        border-radius: 6px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .table-custom {
+        width: 100%;
+        font-size: 13px;
+        min-width: 850px;
+    }
+
+    .table-custom thead th,
+    .table-custom tbody td {
+        padding: 11px 8px;
+        font-size: 12px;
+    }
+
+    .btn-detail,
+    .btn-delete {
+        padding: 6px 8px;
+        font-size: 11px;
+    }
+
+    .btn-delete {
+        margin-left: 3px;
+    }
+}
+
+/* Mobile Kecil (< 400px) */
+@media screen and (max-width: 399px) {
+    .report-page {
+        padding: 12px 14px 40px;
+    }
+
+    .report-title {
+        font-size: 16px;
+        letter-spacing: 0.5px;
+        margin: 6px 0 18px;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        width: 100%;
+        margin: 0 0 12px 0;
+        border-radius: 6px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .table-custom {
+        width: 100%;
+        font-size: 12px;
+        min-width: 800px;
+    }
+
+    .table-custom thead th,
+    .table-custom tbody td {
+        padding: 10px 7px;
+        font-size: 11px;
+    }
+
+    .btn-detail,
+    .btn-delete {
+        padding: 5px 7px;
+        font-size: 10px;
+    }
+
+    .btn-delete {
+        margin-left: 2px;
+    }
+}
+/* =====================================
+   PERBAIKAN RESPONSIVE SEARCH & TABLE
+   ===================================== */
+
+/* Search box penuh sejajar tabel */
+.search-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 15px;
+}
+
+.search-wrapper input {
+    width: 100%;
+    padding: 10px 12px 10px 38px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    height: 40px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.search-wrapper i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #555;
+}
+
+/* Halaman utama tidak ikut scroll horizontal */
+.report-page {
+    background: #ffffff;
+    padding: 20px 30px 60px;
+    min-height: 70vh;
+    overflow-x: hidden;
+}
+
+/* Wrapper tabel */
+.table-container {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Tabel default lebar penuh */
+.table-custom {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* === RESPONSIVE === */
+@media screen and (max-width: 1200px) {
+    .report-page {
+        padding: 18px 20px 50px;
+    }
+
+    .table-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .table-custom {
+        min-width: 900px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .search-wrapper {
+        margin-bottom: 10px;
+    }
+
+    .search-wrapper input {
+        height: 36px;
+        font-size: 14px;
+    }
+
+    .table-container {
+        overflow-x: auto;
+    }
+
+    .table-custom {
+        min-width: 800px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .search-wrapper input {
+        height: 34px;
+        font-size: 13px;
+    }
+
+    .table-custom {
+        min-width: 750px;
+    }
+}

@@ -1,0 +1,1033 @@
+/* 🌟 Wrapper umum */
+.form-wrapper {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 1100px;
+    overflow: visible;
+    box-sizing: border-box;
+    position: relative;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    width: 100%;
+}
+
+.form-wrapper h4 {
+    font-weight: bold;
+    color: #2b2e77;
+    border-bottom: 3px solid #6f42c1;
+    padding-bottom: 10px;
+}
+
+/* 🟪 Header tabel warna ungu gelap */
+.table thead th {
+    background-color: #2b2e77 !important;
+    color: #fff !important;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Label "Pilih" jangan putih */
+.table thead th .form-check-label {
+    color: #ffffff !important;
+    font-weight: 500;
+}
+.table thead th .form-check-input {
+    accent-color: #6f42c1;
+}
+
+/* Tombol umum (gradasi ungu–indigo–hitam) */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 130px;
+    width: 130px;
+    height: 36px;
+    padding: 0 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(
+        145deg,
+        rgba(55, 42, 100, 0.95),
+        rgba(61, 56, 146, 0.92),
+        rgba(32, 45, 77, 0.9)
+    );
+    color: #fff !important;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.btn:hover {
+    background: linear-gradient(
+        145deg,
+        rgba(61, 56, 146, 1),
+        rgba(75, 62, 160, 1),
+        rgba(40, 52, 92, 1)
+    );
+    transform: translateY(-2px);
+}
+
+.search-wrapper {
+    position: relative;
+    width: 400px;
+}
+
+.search-wrapper input {
+    width: 100%;
+    padding: 8px 15px 8px 40px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.search-wrapper input:focus {
+    outline: none;
+    border-color: #4a90e2;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+.search-wrapper input::placeholder {
+    color: #999;
+}
+
+.search-wrapper i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    font-size: 16px;
+}
+
+/* 🔴 Tombol Hapus Terpilih — pakai prioritas tinggi */
+#deleteSelectedBtn,
+.btn-danger,
+.btn-delete-selected {
+    background: #dc3545 !important;
+    color: #fff !important;
+    border: none !important;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    min-width: 130px !important;
+    width: 130px !important;
+    height: 36px !important;
+}
+#deleteSelectedBtn:hover,
+.btn-danger:hover,
+.btn-delete-selected:hover {
+    background: #bb2d3b !important;
+    transform: translateY(-2px);
+}
+
+/* Tombol ikon edit & hapus */
+.table td .action-buttons-inline {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+}
+
+.btn-icon-edit, .btn-icon-delete {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    border: none;
+    transition: 0.3s;
+}
+
+/* ✏ Edit pakai gradasi ungu */
+.btn-icon-edit {
+    background: linear-gradient(
+        145deg,
+        rgba(55, 42, 100, 0.95),
+        rgba(61, 56, 146, 0.92),
+        rgba(32, 45, 77, 0.9)
+    );
+    color: #fff;
+}
+.btn-icon-edit:hover {
+    background: linear-gradient(
+        145deg,
+        rgba(61, 56, 146, 1),
+        rgba(75, 62, 160, 1),
+        rgba(40, 52, 92, 1)
+    );
+    transform: scale(1.05);
+}
+
+/* 🗑 Delete merah */
+.btn-icon-delete {
+    background-color: #dc3545;
+    color: #fff;
+}
+.btn-icon-delete:hover {
+    background-color: #bb2d3b;
+    transform: scale(1.05);
+}
+
+/* Modal tombol */
+.modal-footer .btn-cancel {
+    background-color: #6c757d !important;
+    color: #fff !important;
+}
+.modal-footer .btn-cancel:hover {
+    background-color: #5a6268 !important;
+}
+.modal-footer .btn-confirm-delete {
+    background-color: #dc3545 !important;
+    color: #fff !important;
+}
+.modal-footer .btn-confirm-delete:hover {
+    background-color: #bb2d3b !important;
+}
+
+/* Checkbox & label */
+.form-check-label { color: #6f42c1; }
+.form-check-input:checked {
+    background-color: #6f42c1 !important;
+    border-color: #6f42c1 !important;
+}
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.25rem rgba(111, 66, 193, 0.25);
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  gap: 5px;
+  margin: 0;
+  padding: 0;
+}
+.pagination .page-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  color: #6c757d;
+  background-color: #f8f9fa;
+}
+.pagination .page-item.active .page-link {
+  background-color: #6f42c1;
+  color: #fff;
+}
+
+/* 🛑 Override tombol di semua modal hapus */
+.modal .modal-footer .btn-cancel,
+.modal .modal-footer .btn-confirm-delete {
+    background: none !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    transition: background-color 0.3s ease;
+}
+
+.modal .modal-footer .btn-cancel {
+    background-color: #6c757d !important;
+    color: #fff !important;
+}
+.modal .modal-footer .btn-cancel:hover {
+    background-color: #5a6268 !important;
+}
+
+.modal .modal-footer .btn-confirm-delete {
+    background-color: #dc3545 !important;
+    color: #fff !important;
+}
+.modal .modal-footer .btn-confirm-delete:hover {
+    background-color: #bb2d3b !important;
+}
+
+.btn-disabled {
+    background-color: #c0c0c0 !important;
+    color: white !important;
+    border: none;
+    cursor: not-allowed;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+/* ========================================
+   📱 RESPONSIVE DESIGN
+   ======================================== */
+
+/* 📱 HP (< 576px) */
+@media screen and (max-width: 575px) {
+    .form-wrapper {
+        padding: 15px !important;
+        margin: 10px !important;
+        border-radius: 8px !important;
+        width: calc(100% - 20px) !important;
+    }
+    
+    .form-wrapper h4 {
+        font-size: 16px !important;
+        padding-bottom: 8px !important;
+        margin-bottom: 12px !important;
+    }
+    
+    /* ✅ SEARCH BOX MOBILE - FULL WIDTH & VISIBLE */
+    .search-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: block !important;
+        visibility: visible !important;
+        position: relative !important;
+        margin-bottom: 10px !important;
+    }
+    
+    .search-wrapper input {
+        width: 100% !important;
+        font-size: 12px !important;
+        padding: 8px 10px 8px 35px !important;
+        height: 36px !important;
+        display: block !important;
+        box-sizing: border-box !important;
+    }
+    
+    .search-wrapper i {
+        display: block !important;
+        position: absolute !important;
+        left: 12px !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        font-size: 14px !important;
+    }
+    
+    /* Container untuk search & filter - STACK VERTICAL */
+    .d-flex.justify-content-between.align-items-center.flex-wrap.gap-2 {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 10px !important;
+    }
+    
+    /* Filter form juga full width */
+    form[method="GET"] {
+        width: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+    }
+    
+    form[method="GET"] label {
+        font-size: 12px !important;
+        white-space: nowrap !important;
+    }
+    
+    form[method="GET"] select.form-select {
+        flex: 1 !important;
+        font-size: 11px !important;
+        padding: 6px !important;
+        height: 36px !important;
+    }
+    
+    /* Toolbar buttons - scroll horizontal */
+    .d-flex.gap-2,
+    .mb-3 .d-flex.gap-2 {
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        gap: 8px !important;
+        padding-bottom: 8px !important;
+        display: flex !important;
+    }
+    
+    /* Form import */
+    form[action*="import"] {
+        display: flex !important;
+        gap: 5px !important;
+        flex-shrink: 0 !important;
+    }
+    
+    form[action*="import"] input[type="file"] {
+        max-width: 120px !important;
+        font-size: 9px !important;
+        padding: 4px !important;
+        height: 32px !important;
+    }
+    
+    /* Buttons mobile */
+    .btn,
+    a.btn,
+    button.btn {
+        min-width: 80px !important;
+        width: 80px !important;
+        height: 32px !important;
+        padding: 0 8px !important;
+        font-size: 10px !important;
+        flex-shrink: 0 !important;
+    }
+    
+    #deleteSelectedBtn,
+    .btn-danger {
+        min-width: 100px !important;
+        width: 100px !important;
+        background: #dc3545 !important;
+    }
+    
+    #deleteSelectedBtn:disabled {
+        opacity: 0.6 !important;
+        cursor: not-allowed !important;
+    }
+    
+    /* Tabel scroll horizontal */
+    .table-responsive {
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        margin: 10px 0 !important;
+    }
+    
+    .table {
+        font-size: 11px !important;
+        min-width: 800px !important;
+    }
+    
+    .table thead th {
+        padding: 8px 4px !important;
+        font-size: 10px !important;
+    }
+    
+    .table tbody td {
+        padding: 8px 4px !important;
+        font-size: 11px !important;
+    }
+    
+    /* Icon buttons */
+    .btn-icon-edit,
+    .btn-icon-delete {
+        width: 30px !important;
+        height: 30px !important;
+        font-size: 14px !important;
+    }
+    
+    /* Pagination mobile */
+    .pagination {
+        justify-content: flex-start !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        gap: 4px !important;
+    }
+    
+    .pagination .page-link {
+        width: 30px !important;
+        height: 30px !important;
+        font-size: 11px !important;
+        flex-shrink: 0 !important;
+    }
+    
+    /* Modal mobile */
+    .modal-dialog {
+        margin: 10px !important;
+        max-width: calc(100% - 20px) !important;
+    }
+    
+    .modal-body {
+        padding: 15px !important;
+        font-size: 13px !important;
+    }
+    
+    .modal-footer .btn {
+        min-width: 80px !important;
+        width: auto !important;
+        padding: 8px 15px !important;
+        font-size: 12px !important;
+    }
+    
+    /* Alert mobile */
+    .alert {
+        font-size: 12px !important;
+        padding: 10px !important;
+    }
+    
+    /* Scrollbar kecil */
+    ::-webkit-scrollbar {
+        height: 5px !important;
+        width: 5px !important;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1 !important;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: #888 !important;
+        border-radius: 3px !important;
+    }
+}
+
+/* 📱 TABLET PORTRAIT (576px - 767px) */
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    .form-wrapper {
+        padding: 20px !important;
+        margin: 15px auto !important;
+        max-width: 95% !important;
+    }
+    
+    .form-wrapper h4 {
+        font-size: 18px !important;
+    }
+    
+    .search-wrapper {
+        width: 150% !important;
+        max-width: 280px !important;
+    }
+    
+    /* Stack vertical untuk search & filter di tablet kecil */
+    .d-flex.justify-content-between.align-items-center {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 10px !important;
+    }
+    
+    form[method="GET"] {
+        width: 100% !important;
+    }
+    
+    .btn {
+        min-width: 100px !important;
+        width: 100px !important;
+        height: 34px !important;
+        font-size: 11px !important;
+    }
+    
+    #deleteSelectedBtn,
+    .btn-danger {
+        min-width: 120px !important;
+        width: 120px !important;
+    }
+    
+    .table {
+        font-size: 12px !important;
+    }
+    
+    .table thead th,
+    .table tbody td {
+        padding: 8px 5px !important;
+    }
+    
+    .btn-icon-edit,
+    .btn-icon-delete {
+        width: 32px !important;
+        height: 32px !important;
+    }
+    
+    .pagination .page-link {
+        width: 34px !important;
+        height: 34px !important;
+    }
+}
+
+/* 💻 TABLET LANDSCAPE (768px - 991px) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .form-wrapper {
+        padding: 22px !important;
+        margin: 18px auto !important;
+        max-width: 95% !important;
+        width: calc(100% - 40px) !important;
+    }
+    
+    .form-wrapper h4 {
+        font-size: 19px !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .search-wrapper {
+        width: 600px !important;
+    }
+    
+    .search-wrapper input {
+        font-size: 13px !important;
+        padding: 7px 12px 7px 38px !important;
+    }
+    
+    /* Toolbar buttons bisa wrap di tablet landscape */
+    .d-flex.gap-2 {
+        flex-wrap: wrap !important;
+        gap: 6px !important;
+    }
+    
+    form[action*="import"] input[type="file"] {
+        max-width: 160px !important;
+        font-size: 10px !important;
+    }
+    
+    .btn {
+        min-width: 105px !important;
+        width: 105px !important;
+        height: 34px !important;
+        font-size: 11px !important;
+        padding: 0 8px !important;
+    }
+    
+    #deleteSelectedBtn,
+    .btn-danger {
+        min-width: 125px !important;
+        width: 125px !important;
+    }
+    
+    .table {
+        font-size: 12px !important;
+    }
+    
+    .table thead th,
+    .table tbody td {
+        padding: 9px 5px !important;
+        font-size: 12px !important;
+    }
+    
+    select.form-select {
+        font-size: 12px !important;
+    }
+}
+
+    /* 💻 LAPTOP SEPARUH / SPLIT SCREEN (992px - 1199px) */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .form-wrapper {
+        padding: 20px !important;
+        margin: 15px 10px !important;
+        max-width: 100% !important;
+        width: calc(100% - 20px) !important;
+        border-radius: 8px !important;
+    }
+
+    .form-wrapper h4 {
+        font-size: 18px !important;
+        margin-bottom: 12px !important;
+    }
+
+    /* ✅ Search wrapper diperpanjang */
+    .search-wrapper {
+        flex: 1 1 50% !important; /* 🔼 perbesar dominasi input search */
+        max-width: 800px !important; /* 🔼 panjang maksimal */
+        min-width: 300px !important;
+        margin: 0 !important;
+        display: block !important;
+    }
+
+    .search-wrapper input {
+        width: 100% !important;
+        font-size: 13px !important;
+        padding: 9px 15px 9px 40px !important;
+        height: 38px !important;
+        box-sizing: border-box !important;
+        display: block !important;
+    }
+
+    .search-wrapper i {
+        font-size: 15px !important;
+        left: 14px !important;
+    }
+
+    /* Button search di samping kanan, kecil saja */
+    .search-wrapper + .btn,
+    .search-wrapper + button,
+    button[type="submit"].btn {
+        flex-shrink: 0 !important;
+        min-width: 80px !important;
+        width: 80px !important;
+        height: 38px !important;
+        font-size: 12px !important;
+        padding: 0 8px !important;
+        display: inline-flex !important;
+        white-space: nowrap !important;
+    }
+
+    /* Filter pindah ke bawah search - full width juga */
+    form[method="GET"] {
+        order: 2 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 10px !important;
+        flex-shrink: 0 !important;
+    }
+    
+    form[method="GET"] label {
+        font-size: 13px !important;
+        white-space: nowrap !important;
+        margin-right: 5px !important;
+        margin-bottom: 0 !important;
+        flex-shrink: 0 !important;
+    }
+    
+    form[method="GET"] select.form-select {
+        flex: 1 1 auto !important;
+        max-width: 100% !important;
+        font-size: 13px !important;
+        padding: 8px 12px !important;
+        height: 42px !important;
+    }
+    
+    /* Toolbar buttons - compact */
+    .d-flex.gap-2 {
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        gap: 6px !important;
+        -webkit-overflow-scrolling: touch !important;
+    }
+    
+    form[action*="import"] {
+        display: flex !important;
+        gap: 4px !important;
+        flex-shrink: 0 !important;
+    }
+    
+    form[action*="import"] input[type="file"] {
+        max-width: 140px !important;
+        font-size: 10px !important;
+        padding: 5px !important;
+        height: 34px !important;
+    }
+    
+    /* Buttons split screen */
+    .btn,
+    a.btn,
+    button.btn {
+        min-width: 100px !important;
+        width: 100px !important;
+        height: 34px !important;
+        padding: 0 8px !important;
+        font-size: 11px !important;
+        flex-shrink: 0 !important;
+        white-space: nowrap !important;
+    }
+    
+    #deleteSelectedBtn,
+    .btn-danger {
+        min-width: 120px !important;
+        width: 120px !important;
+        background: #dc3545 !important;
+    }
+    
+    /* Tabel split screen */
+    .table-responsive {
+        overflow-x: auto !important;
+        margin: 10px 0 !important;
+    }
+    
+/* === Atur lebar kolom tabel agar sama rata === */
+.table {
+    table-layout: fixed; /* Biar kolom punya lebar tetap */
+    width: 100%; /* Isi penuh wadah */
+}
+
+.table th,
+.table td {
+    text-align: center; /* Tengahin isi */
+    vertical-align: middle;
+    word-wrap: break-word; /* Biar teks panjang turun ke bawah */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; /* Bisa kamu hapus kalau mau teksnya turun baris */
+}
+
+/* Bisa juga tambahkan lebar rata untuk semua kolom */
+.table th,
+.table td {
+    width: calc(100% / 12); /* Karena ada 12 kolom total */
+}
+    
+    /* Icon buttons split screen */
+    .btn-icon-edit,
+    .btn-icon-delete {
+        width: 32px !important;
+        height: 32px !important;
+        font-size: 14px !important;
+    }
+    
+    .action-buttons-inline {
+        gap: 5px !important;
+    }
+    
+    /* Pagination split screen */
+    .pagination {
+        justify-content: flex-start !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        gap: 4px !important;
+    }
+    
+    .pagination .page-link {
+        width: 34px !important;
+        height: 34px !important;
+        font-size: 11px !important;
+        flex-shrink: 0 !important;
+    }
+    
+    /* Alert split screen */
+    .alert {
+        font-size: 12px !important;
+        padding: 10px !important;
+        margin-bottom: 10px !important;
+    }
+    
+    /* Modal split screen */
+    .modal-dialog {
+        max-width: 90% !important;
+        margin: 15px auto !important;
+    }
+    
+    .modal-body {
+        font-size: 13px !important;
+        padding: 15px !important;
+    }
+    
+    .modal-footer .btn {
+        min-width: 90px !important;
+        font-size: 12px !important;
+        padding: 8px 12px !important;
+    }
+    
+    /* Scrollbar untuk split screen */
+    ::-webkit-scrollbar {
+        height: 6px !important;
+        width: 6px !important;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1 !important;
+        border-radius: 3px !important;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: #888 !important;
+        border-radius: 3px !important;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555 !important;
+    }
+    /* 🔧 Tambahan agar search, filter, dan tombol sejajar lurus tengah */
+.toolbar-container,
+.mb-3.d-flex.justify-content-between,
+div[class*="d-flex"][class*="justify-content-between"] {
+    display: flex;
+    align-items: center;      /* ✅ pastikan vertikal sejajar */
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* Pastikan semua elemen di bar atas sejajar */
+.search-wrapper,
+form[method="GET"],
+.d-flex.gap-2 {
+    display: flex;
+    align-items: center;      /* ✅ semua item di tengah vertikal */
+    margin: 0;
+}
+
+/* Kalau masih beda tinggi, atur tinggi konsisten */
+.search-wrapper input,
+form[method="GET"] select,
+.btn {
+    height: 38px !important;  /* ✅ samakan tinggi semua elemen */
+    box-sizing: border-box;
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  /* ✅ Pastikan toolbar sejajar lurus tengah */
+  .mb-3.d-flex.justify-content-between,
+  .toolbar-container,
+  div[class*="d-flex"][class*="justify-content-between"] {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important; /* 🔥 ini kunci biar vertikal sejajar */
+    justify-content: space-between !important;
+    gap: 12px !important;
+  }
+
+  /* ✅ Samakan tinggi semua elemen agar lurus sempurna */
+  .search-wrapper input,
+  form[method="GET"] select,
+  .btn {
+    height: 38px !important;
+    line-height: 38px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 🔧 Kalau search bar kepanjangan, batasi agar tetap proporsional */
+  .search-wrapper {
+    flex: 1 1 auto !important;
+    max-width: 500px !important;
+  }
+}
+}
+
+/* 🖥️ LAPTOP FULL / DESKTOP (1200px - 1599px) */
+@media screen and (min-width: 1200px) and (max-width: 1599px) {
+    .form-wrapper {
+        padding: 30px !important;
+        max-width: 1100px !important;
+    }
+    
+    .form-wrapper h4 {
+        font-size: 22px !important;
+    }
+    
+    /* ✅ Search wrapper PANJANG untuk laptop full */
+    .search-wrapper {
+        width: 600px !important;
+    }
+    
+    .search-wrapper input {
+        font-size: 14px !important;
+    }
+    
+    .btn {
+        min-width: 130px !important;
+        width: 130px !important;
+    }
+    
+    .table {
+        font-size: 14px !important;
+    }
+}
+
+/* 🖥️ DESKTOP BESAR (1600px - 1919px) */
+@media screen and (min-width: 1600px) and (max-width: 1919px) {
+    .form-wrapper {
+        padding: 35px !important;
+        max-width: 1300px !important;
+    }
+    
+    .form-wrapper h4 {
+        font-size: 24px !important;
+    }
+    
+    /* ✅ Search wrapper SANGAT PANJANG untuk desktop besar */
+    .search-wrapper {
+        width: 700px !important;
+    }
+    
+    .search-wrapper input {
+        font-size: 14px !important;
+        padding: 9px 15px 9px 42px !important;
+    }
+    
+    .search-wrapper i {
+        font-size: 17px !important;
+    }
+    
+    .btn {
+        min-width: 140px !important;
+        width: 140px !important;
+        font-size: 14px !important;
+    }
+    
+    .table {
+        font-size: 14px !important;
+    }
+}
+
+/* 🖥️ 4K & ULTRA WIDE (>= 1920px) */
+@media screen and (min-width: 1920px) {
+    .form-wrapper {
+        padding: 40px !important;
+        max-width: 1500px !important;
+    }
+    
+    .form-wrapper h4 {
+        font-size: 26px !important;
+    }
+    
+    /* ✅ Search wrapper ULTRA PANJANG untuk 4K */
+    .search-wrapper {
+        width: 600px !important;
+    }
+    
+    .search-wrapper input {
+        font-size: 15px !important;
+        padding: 10px 18px 10px 45px !important;
+        height: 42px !important;
+    }
+    
+    .search-wrapper i {
+        font-size: 18px !important;
+        left: 16px !important;
+    }
+    
+    .btn {
+        min-width: 150px !important;
+        width: 150px !important;
+        font-size: 15px !important;
+        height: 40px !important;
+    }
+    
+    .table {
+        font-size: 15px !important;
+    }
+    
+    .table thead th,
+    .table tbody td {
+        padding: 12px !important;
+    }
+}
+
+/* 📱 TOUCH DEVICE OPTIMIZATION */
+@media (hover: none) and (pointer: coarse) {
+    .btn {
+        min-height: 40px !important;
+    }
+    
+    .btn-icon-edit,
+    .btn-icon-delete {
+        min-width: 36px !important;
+        min-height: 36px !important;
+    }
+    
+    .form-check-input {
+        width: 20px !important;
+        height: 20px !important;
+    }
+    
+    .pagination .page-link {
+        min-width: 38px !important;
+        min-height: 38px !important;
+    }
+}
+
+/* 🖨️ PRINT STYLES */
+@media print {
+    .form-wrapper {
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .btn,
+    .pagination,
+    .action-buttons-inline,
+    .form-check-input,
+    .search-wrapper {
+        display: none !important;
+    }
+    
+    .table {
+        font-size: 10pt !important;
+    }
+    
+    .table thead th {
+        background-color: #000 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+}

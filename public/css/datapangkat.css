@@ -1,0 +1,647 @@
+/* ==================== BASE STYLES ==================== */
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+h3 {
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #2b2e77;
+}
+
+/* Alert */
+.alert {
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.btn-gold { 
+  background: linear-gradient(145deg, rgba(55,42,100,0.95), rgba(61,56,146,0.92), rgba(32,45,77,0.9)); 
+  color: #fff!important; 
+  border: none; 
+  border-radius: 8px; 
+  padding: 10px 20px;
+  transition: all 0.3s ease; 
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-gold:hover { 
+  background: linear-gradient(145deg, rgba(61,56,146,1), rgba(75,62,160,1), rgba(40,52,92,1)); 
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn-gradient { 
+  background: linear-gradient(135deg, #e0465d, #7b2cbf); 
+  color: #fff!important; 
+  border: none; 
+  border-radius: 6px; 
+  padding: 8px 20px; 
+  font-weight: 600; 
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-gradient:hover { 
+  transform: scale(1.03); 
+  background: linear-gradient(135deg, #9d174d, #4c1d95);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-danger:hover {
+  background-color: #bb2d3b;
+}
+
+/* Action Buttons */
+.action-buttons-inline { 
+  display: flex; 
+  gap: 8px; 
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn-icon-edit { 
+  background: linear-gradient(145deg, rgba(55,42,100,0.95), rgba(61,56,146,0.92), rgba(32,45,77,0.9)); 
+  color: #fff; 
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.btn-icon-edit:hover { 
+  transform: scale(1.1); 
+  background: linear-gradient(145deg, rgba(61,56,146,1), rgba(75,62,160,1), rgba(40,52,92,1));
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.btn-icon-delete { 
+  background: #dc3545;
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.btn-icon-delete:hover { 
+  background: #bb2d3b; 
+  transform: scale(1.1);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Table Styles */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.table { 
+  width: 100%;
+  margin-bottom: 0;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.table thead th { 
+  background-color: #2b2e77!important;
+  color: white!important;
+  text-align: center; 
+  vertical-align: middle;
+  padding: 14px 10px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid #23265a;
+  white-space: nowrap;
+}
+
+.table tbody td {
+  padding: 12px 10px;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 14px;
+  border: 1px solid #dee2e6;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.table tbody tr:hover {
+  background-color: #e9ecef;
+  transition: background-color 0.2s ease;
+}
+
+.table-bordered {
+  border: 1px solid #dee2e6;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  gap: 5px;
+  padding: 0;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.pagination .page-item {
+  display: inline-block;
+}
+
+.pagination .page-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  color: #6c757d;
+  background: #f8f9fa;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #6f42c1;
+  color: #fff;
+  border-color: #6f42c1;
+}
+
+.pagination .page-link:hover:not(.active) {
+  background-color: #e9ecef;
+  border-color: #adb5bd;
+}
+
+.pagination .page-item.disabled .page-link {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* Modal */
+.modal-dialog {
+  max-width: 500px;
+  width: 90%;
+  margin: 1.75rem auto;
+}
+
+.modal-delete-wide .modal-dialog {
+  max-width: 700px;
+  width: 90%;
+}
+
+.modal-content {
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  border: none;
+}
+
+.modal-header {
+  border-radius: 10px 10px 0 0;
+  background: linear-gradient(145deg, #2b2e77, #3a3e9f);
+  color: #fff;
+  padding: 16px 20px;
+  border-bottom: none;
+}
+
+.modal-header h5 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.modal-footer {
+  padding: 12px 20px;
+  border-top: 1px solid #dee2e6;
+  gap: 8px;
+}
+
+/* Form Controls */
+.form-control {
+  font-size: 14px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ced4da;
+  width: 100%;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #6f42c1;
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(111, 66, 193, 0.25);
+}
+
+/* Utility Classes */
+.d-flex {
+  display: flex;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-3 {
+  margin-bottom: 1rem;
+}
+
+.mt-4 {
+  margin-top: 1.5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* ==================== MOBILE PHONES (< 576px) ==================== */
+@media (max-width: 575.98px) {
+  .container {
+    padding: 0 10px;
+    max-width: 100%;
+  }
+  
+  h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  /* Buttons */
+  .btn-gold {
+    padding: 8px 16px;
+    font-size: 13px;
+    width: 100%;
+  }
+  
+  .btn-gradient, .btn-secondary, .btn-danger {
+    padding: 8px 16px;
+    font-size: 13px;
+    width: 100%;
+  }
+  
+  .d-flex.justify-content-between {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  /* Action Buttons */
+  .action-buttons-inline {
+    gap: 6px;
+  }
+  
+  .btn-icon-edit, .btn-icon-delete {
+    width: 28px;
+    height: 28px;
+    font-size: 11px;
+  }
+  
+  /* Table */
+  .table {
+    font-size: 11px;
+  }
+  
+  .table thead th {
+    padding: 8px 4px;
+    font-size: 11px;
+  }
+  
+  .table tbody td {
+    padding: 8px 4px;
+    font-size: 11px;
+  }
+  
+  .table-responsive {
+    border: 1px solid #dee2e6;
+  }
+  
+  /* Sembunyikan kolom No di mobile untuk hemat space */
+  .table thead th:first-child,
+  .table tbody td:first-child {
+    display: none;
+  }
+  
+  /* Pagination */
+  .pagination {
+    justify-content: center;
+    gap: 3px;
+  }
+  
+  .pagination .page-link {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+  
+  /* Modal */
+  .modal-dialog, .modal-delete-wide .modal-dialog {
+    width: 95%;
+    margin: 0.5rem auto;
+  }
+  
+  .modal-header {
+    padding: 12px 15px;
+  }
+  
+  .modal-header h5 {
+    font-size: 16px;
+  }
+  
+  .modal-body {
+    padding: 15px;
+  }
+  
+  .modal-footer {
+    padding: 10px 15px;
+    flex-direction: column;
+  }
+  
+  .modal-footer button {
+    width: 100%;
+    margin: 0;
+  }
+  
+  /* Form */
+  .form-control {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+  
+  /* Alert */
+  .alert {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+}
+
+/* ==================== TABLETS (576px - 991px) ==================== */
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .container {
+    max-width: 720px;
+    padding: 0 15px;
+  }
+  
+  h3 {
+    font-size: 22px;
+  }
+  
+  /* Buttons */
+  .btn-gold, .btn-gradient {
+    padding: 9px 18px;
+    font-size: 13px;
+  }
+  
+  .action-buttons-inline {
+    gap: 7px;
+  }
+  
+  .btn-icon-edit, .btn-icon-delete {
+    width: 30px;
+    height: 30px;
+  }
+  
+  /* Table */
+  .table {
+    font-size: 13px;
+  }
+  
+  .table thead th {
+    padding: 10px 8px;
+    font-size: 13px;
+  }
+  
+  .table tbody td {
+    padding: 10px 8px;
+    font-size: 13px;
+  }
+  
+  /* Pagination */
+  .pagination .page-link {
+    width: 34px;
+    height: 34px;
+    font-size: 13px;
+  }
+  
+  /* Modal */
+  .modal-dialog {
+    max-width: 540px;
+  }
+  
+  .modal-delete-wide .modal-dialog {
+    max-width: 640px;
+  }
+}
+
+/* ==================== LAPTOP (992px - 1399px) - TAMPILAN SEPARUH ==================== */
+@media (min-width: 992px) and (max-width: 1399.98px) {
+  .container {
+    max-width: 960px; /* Separuh dari full width */
+    margin: 0 auto;
+    padding: 20px 15px;
+  }
+  
+  h3 {
+    font-size: 24px;
+  }
+  
+  /* Table */
+  .table {
+    font-size: 14px;
+  }
+  
+  .table thead th {
+    padding: 12px 10px;
+    font-size: 14px;
+  }
+  
+  .table tbody td {
+    padding: 12px 10px;
+    font-size: 14px;
+  }
+  
+  /* Modal */
+  .modal-dialog {
+    max-width: 500px;
+  }
+  
+  .modal-delete-wide .modal-dialog {
+    max-width: 700px;
+  }
+  
+  /* Pagination */
+  .pagination .page-link {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* ==================== DESKTOP/COMPUTER (≥ 1400px) - TAMPILAN SEPARUH ==================== */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1140px; /* Separuh dari full width desktop */
+    margin: 0 auto;
+    padding: 30px 15px;
+  }
+  
+  h3 {
+    font-size: 26px;
+    margin-bottom: 25px;
+  }
+  
+  /* Buttons dengan spacing lebih lega */
+  .btn-gold, .btn-gradient {
+    padding: 10px 24px;
+    font-size: 14px;
+  }
+  
+  /* Table */
+  .table {
+    font-size: 14px;
+  }
+  
+  .table thead th {
+    padding: 14px 12px;
+    font-size: 14px;
+  }
+  
+  .table tbody td {
+    padding: 12px 12px;
+    font-size: 14px;
+  }
+  
+  /* Modal */
+  .modal-dialog {
+    max-width: 540px;
+  }
+  
+  .modal-delete-wide .modal-dialog {
+    max-width: 750px;
+  }
+  
+  /* Pagination */
+  .pagination .page-link {
+    width: 38px;
+    height: 38px;
+  }
+  
+  .pagination {
+    margin: 25px 0;
+  }
+}
+
+/* ==================== PRINT STYLES ==================== */
+@media print {
+  .btn-gold, .btn-icon-edit, .btn-icon-delete, .pagination {
+    display: none;
+  }
+  
+  .table {
+    border: 1px solid #000;
+  }
+  
+  .table thead th {
+    background-color: #000!important;
+    color: #fff!important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
+/* ==================== ACCESSIBILITY ==================== */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus visible untuk keyboard navigation */
+button:focus-visible,
+.btn-gold:focus-visible,
+.btn-gradient:focus-visible,
+.btn-icon-edit:focus-visible,
+.btn-icon-delete:focus-visible {
+  outline: 2px solid #6f42c1;
+  outline-offset: 2px;
+}

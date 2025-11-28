@@ -1,0 +1,89 @@
+.btn-gold {
+    background: linear-gradient(145deg, rgba(55,42,100,0.95), rgba(61,56,146,0.92), rgba(32,45,77,0.9));
+    color: #fff !important;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+.btn-gold:hover {
+    background: linear-gradient(145deg, rgba(61,56,146,1), rgba(75,62,160,1), rgba(40,52,92,1));
+    color: #fff !important;
+    transform: translateY(-2px);
+}
+
+.btn-icon-edit, .btn-icon-delete {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+.btn-icon-edit {
+    background: linear-gradient(145deg, rgba(55,42,100,0.95), rgba(61,56,146,0.92), rgba(32,45,77,0.9));
+}
+.btn-icon-edit:hover {
+    background: linear-gradient(145deg, rgba(61,56,146,1), rgba(75,62,160,1), rgba(40,52,92,1));
+    transform: scale(1.05);
+}
+.btn-icon-delete {
+    background: #dc3545;
+}
+.btn-icon-delete:hover {
+    background: #bb2d3b;
+    transform: scale(1.05);
+}
+.btn-gradient {
+    background: linear-gradient(135deg, #e0465d, #7b2cbf);
+    color: #fff !important;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.btn-gradient:hover {
+    background: linear-gradient(135deg, #9d174d, #4c1d95);
+    transform: scale(1.03);
+}
+.table thead th {
+    background-color: #2b2e77 !important;
+    color: white !important;
+    text-align: center;
+    vertical-align: middle;
+}
+.action-buttons-inline {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+.modal-delete-wide .modal-dialog {
+    max-width: 700px;
+    width: 90%;
+}
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  gap: 5px;
+}
+.pagination .page-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  color: #6c757d;
+  background-color: #f8f9fa;
+}
+.pagination .page-item.active .page-link {
+  background-color: #6f42c1;
+  color: #fff;
+}

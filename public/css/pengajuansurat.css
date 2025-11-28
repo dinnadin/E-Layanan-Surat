@@ -1,0 +1,161 @@
+/* === GRID & CARD UTAMA === */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 40px;
+    padding: 50px 40px;
+    justify-items: center;
+}
+
+.card {
+    background: linear-gradient(
+        145deg,
+        rgba(55, 42, 100, 0.95) 0%,
+        rgba(54, 50, 122, 0.92) 50%,
+        rgba(32, 45, 77, 0.9) 100%
+    );
+    border-radius: 18px;
+    padding: 16px;
+    width: 240px;
+    height: 130px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.card:hover {
+    transform: scale(1.02) translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.card img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 280px;
+    opacity: 0.2;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.card-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+    width: 100%;
+    padding: 10px;
+}
+
+.card h2 {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.btn {
+    background: #eeebf3ff;
+    color: black;
+    padding: 8px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    z-index: 1;
+}
+
+.btn:hover {
+    background: #cac6d2ff;
+    color: black;
+}
+
+/* === KHUSUS ROLE KEPALA === */
+.role-kepala .card {
+    max-width: 290px;
+    height: 180px;
+}
+
+.role-kepala .card h2 {
+    font-size: 20px;
+}
+
+.role-kepala .card img {
+    width: 290px;
+}
+.role-kepala .grid {
+    padding-left: 50px;
+}
+/* === KHUSUS ROLE PEGAWAI === */
+.role-pegawai .grid {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+/* ===================================================== */
+/* === RESPONSIVE DESIGN PENGAJUAN SURAT === */
+/* ===================================================== */
+
+/* HP kecil (≤768px) */
+@media screen and (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+        gap: 15px;
+        padding: 10px;
+        margin-top: 20px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 200px;
+        height: 120px;
+    }
+
+    .card h2 {
+        font-size: 16px;
+    }
+
+    .btn {
+        font-size: 13px;
+        padding: 6px 14px;
+    }
+}
+
+/* Responsif tablet / Layar separuh laptop (769–1200px) - 3 CARD VERTIKAL LURUS */
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+    .grid {
+        grid-template-columns: 1fr; /* Paksa 1 kolom */
+        max-width: 280px; /* Cukup untuk 1 card saja */
+        gap: 25px;
+        padding: 30px 20px;
+    }
+
+    .card {
+        width: 240px;
+        height: 130px;
+    }
+}
+.role-pegawai .grid {
+        padding-left: 20px; /* Reset untuk HP */
+    }
+
+/* Desktop besar (≥1201px) - 3 CARD HORIZONTAL BERSEBELAHAN */
+@media screen and (min-width: 1201px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 900px;
+        gap: 40px;
+    }
+
+    .card {
+        width: 240px;
+        height: 130px;
+    }
+}

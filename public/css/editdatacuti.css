@@ -1,0 +1,575 @@
+/* Struktur Utama */
+.cuti-page {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+    background-color: #f8f9fc;
+    min-height: 100vh;
+}
+
+.cuti-card {
+    width: 80%;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 40px;
+}
+
+.cuti-box {
+    width: 100%;
+}
+
+/* Header */
+.cuti-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cuti-header .back-link {
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    color: #5b2dee;
+    transition: color 0.3s ease;
+}
+
+.cuti-header .back-link:hover {
+    color: #a26bfa;
+}
+
+.cuti-header h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+    color: #333;
+}
+
+/* Garis pemisah */
+.cuti-divider {
+    border: none;
+    border-top: 2px solid #ccc;
+    margin: 20px 0;
+}
+
+/* Form */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.form-field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+.form-field input {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 15px;
+    background-color: #f9f9f9;
+}
+
+/* Grid Angka */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "n2 n1 n"
+        "jumlah diambil sisa";
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.field-n2 { grid-area: n2; }
+.field-n1 { grid-area: n1; }
+.field-n { grid-area: n; }
+.field-jumlah { grid-area: jumlah; }
+.field-diambil { grid-area: diambil; }
+.field-sisa { grid-area: sisa; }
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.field input {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 8px 10px;
+    text-align: center;
+    background-color: #fff;
+    font-size: 15px;
+}
+
+/* Tombol Simpan */
+.btn-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-simpan {
+    background: linear-gradient(135deg, #e0465d, #7b2cbf);
+    color: white;
+    border: none;
+    padding: 10px 35px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-simpan:hover {
+    background: linear-gradient(135deg, #9d174d, #4c1d95);
+}
+
+/* ========== RESPONSIVE BREAKPOINTS ========== */
+
+/* Large Desktop (> 1400px) */
+@media screen and (min-width: 1401px) {
+    .cuti-card {
+        width: 75%;
+        max-width: 1200px;
+        padding: 45px;
+    }
+    
+    .cuti-header h2,
+    .cuti-header .back-link {
+        font-size: 24px;
+    }
+    
+    .form-field input,
+    .field input {
+        font-size: 16px;
+        padding: 10px 14px;
+    }
+    
+    .btn-simpan {
+        background: linear-gradient(135deg, #e0465d, #7b2cbf);
+        padding: 12px 40px;
+        font-size: 16px;
+    }
+}
+
+/* Desktop (1200px - 1400px) */
+@media screen and (max-width: 1400px) {
+    .cuti-card {
+        width: 80%;
+        padding: 40px;
+    }
+}
+
+/* Desktop Kecil (992px - 1200px) */
+@media screen and (max-width: 1200px) {
+    .cuti-card {
+        width: 85%;
+        padding: 35px;
+    }
+    
+    .cuti-header h2,
+    .cuti-header .back-link {
+        font-size: 20px;
+    }
+}
+
+/* Tablet & Laptop Separuh (768px - 991px) */
+@media screen and (max-width: 991px) {
+    .cuti-page {
+        padding: 30px 15px;
+    }
+    
+    .cuti-card {
+        width: 90%;
+        padding: 30px;
+        border-radius: 15px;
+    }
+    
+    .cuti-header h2,
+    .cuti-header .back-link {
+        font-size: 20px;
+    }
+    
+    .form-row {
+        gap: 15px;
+        margin-bottom: 25px;
+    }
+    
+    .form-field {
+        margin-bottom: 5px;
+    }
+    
+    .form-grid {
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+    
+    .form-field label,
+    .field label {
+        margin-bottom: 8px;
+    }
+    
+    .form-field input,
+    .field input {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+    
+    .btn-simpan {
+        background: linear-gradient(135deg, #e0465d, #7b2cbf);
+        padding: 10px 30px;
+        font-size: 14px;
+    }
+}
+
+/* Tablet Portrait & Laptop Separuh Kecil (600px - 768px) */
+@media screen and (max-width: 768px) {
+    .cuti-page {
+        padding: 25px 12px;
+    }
+    
+    .cuti-card {
+        width: 95%;
+        padding: 25px;
+        border-radius: 12px;
+    }
+    
+    .cuti-header {
+        gap: 8px;
+    }
+    
+    .cuti-header h2,
+    .cuti-header .back-link {
+        font-size: 18px;
+    }
+    
+    .cuti-divider {
+        margin: 15px 0;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+        margin-bottom: 15px;
+    }
+    
+    .form-field {
+        margin-bottom: 15px;
+    }
+    
+    .form-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "n2 n1"
+            "n n"
+            "jumlah diambil"
+            "sisa sisa";
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+    
+    .field-n {
+        grid-column: 1 / -1;
+    }
+    
+    .field-sisa {
+        grid-column: 1 / -1;
+    }
+    
+    .form-field input,
+    .field input {
+        font-size: 14px;
+    }
+    
+    .btn-wrapper {
+        justify-content: center;
+    }
+    
+    .btn-simpan {
+        background: linear-gradient(135deg, #e0465d, #7b2cbf);
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* Mobile Landscape & Small Tablet (480px - 600px) */
+@media screen and (max-width: 600px) {
+    .cuti-page {
+        padding: 20px 10px;
+    }
+    
+    .cuti-card {
+        width: 98%;
+        padding: 20px;
+        border-radius: 10px;
+    }
+    
+    .cuti-header h2,
+    .cuti-header .back-link {
+        font-size: 16px;
+    }
+    
+    .cuti-divider {
+        margin: 12px 0;
+    }
+    
+    .form-field label,
+    .field label {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+    
+    .form-field input,
+    .field input {
+        font-size: 13px;
+        padding: 7px 10px;
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "n2"
+            "n1"
+            "n"
+            "jumlah"
+            "diambil"
+            "sisa";
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .field-n2,
+    .field-n1,
+    .field-n,
+    .field-jumlah,
+    .field-diambil,
+    .field-sisa {
+        grid-column: 1;
+    }
+    
+    .btn-simpan {
+        padding: 10px 25px;
+        font-size: 14px;
+        width: 100%;
+        background: linear-gradient(135deg, #e0465d, #7b2cbf);
+    }
+}
+
+/* Mobile Portrait (< 480px) */
+@media screen and (max-width: 480px) {
+    .cuti-page {
+        padding: 15px 8px;
+    }
+    
+    .cuti-card {
+        width: 100%;
+        padding: 18px;
+        border-radius: 8px;
+        box-shadow: 0 0 8px rgba(0,0,0,0.08);
+    }
+    
+    .cuti-header {
+        gap: 6px;
+    }
+    
+    .cuti-header h2,
+    .cuti-header .back-link {
+        font-size: 15px;
+    }
+    
+    .cuti-divider {
+        margin: 10px 0;
+        border-top: 1.5px solid #ccc;
+    }
+    
+    .form-field {
+        margin-bottom: 12px;
+    }
+    
+    .form-field label,
+    .field label {
+        font-size: 13px;
+        margin-bottom: 4px;
+    }
+    
+    .form-field input,
+    .field input {
+        font-size: 12px;
+        padding: 6px 8px;
+        border-radius: 6px;
+    }
+    
+    .form-grid {
+        gap: 8px;
+        margin-bottom: 18px;
+    }
+    
+    .btn-wrapper {
+        margin-top: 5px;
+    }
+    
+    .btn-simpan {
+        background: linear-gradient(135deg, #e0465d, #7b2cbf);
+        padding: 9px 20px;
+        font-size: 13px;
+        border-radius: 6px;
+    }
+}
+
+/* Extra Small Mobile (< 360px) */
+@media screen and (max-width: 360px) {
+    .cuti-page {
+        padding: 12px 5px;
+    }
+    
+    .cuti-card {
+        padding: 15px;
+        border-radius: 6px;
+    }
+    
+    .cuti-header h2,
+    .cuti-header .back-link {
+        font-size: 14px;
+    }
+    
+    .form-field label,
+    .field label {
+        font-size: 12px;
+    }
+    
+    .form-field input,
+    .field input {
+        font-size: 11px;
+        padding: 5px 7px;
+    }
+    
+    .btn-simpan {
+        background: linear-gradient(135deg, #e0465d, #7b2cbf);
+        padding: 8px 18px;
+        font-size: 12px;
+    }
+}
+
+/* Computer Separuh (saat browser diperkecil) */
+@media screen and (min-width: 769px) and (max-width: 1100px) {
+    .cuti-card {
+        width: 88%;
+        padding: 35px;
+    }
+    
+    .form-row {
+        gap: 18px;
+        margin-bottom: 25px;
+    }
+    
+    .form-field {
+        margin-bottom: 5px;
+    }
+    
+    .form-grid {
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+    
+    .form-field label,
+    .field label {
+        margin-bottom: 8px;
+    }
+    
+    .form-field input,
+    .field input {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+}
+
+/* Laptop Separuh (saat browser diperkecil) */
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .cuti-card {
+        width: 92%;
+        padding: 30px;
+    }
+    
+    .form-row {
+        gap: 15px;
+        margin-bottom: 25px;
+    }
+    
+    .form-field {
+        margin-bottom: 5px;
+    }
+    
+    .form-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        row-gap: 20px;
+        margin-bottom: 30px;
+    }
+    
+    /* Reset grid area untuk tampilan 2 kolom */
+    .field-n2,
+    .field-n1,
+    .field-n,
+    .field-jumlah,
+    .field-diambil,
+    .field-sisa {
+        grid-column: auto;
+    }
+    
+    /* Baris 1: N-2 dan N-1 */
+    .field-n2 { 
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .field-n1 { 
+        grid-column: 2;
+        grid-row: 1;
+    }
+    
+    /* Baris 2: N dan Jumlah */
+    .field-n { 
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .field-jumlah { 
+        grid-column: 2;
+        grid-row: 2;
+    }
+    
+    /* Baris 3: Diambil dan Sisa */
+    .field-diambil { 
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .field-sisa { 
+        grid-column: 2;
+        grid-row: 3;
+    }
+    
+    .form-field label,
+    .field label {
+        margin-bottom: 8px;
+    }
+    
+    .form-field input,
+    .field input {
+        padding: 10px 12px;
+    }
+}

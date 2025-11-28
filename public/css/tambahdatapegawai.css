@@ -1,0 +1,315 @@
+/* Bungkus form biar ke tengah */
+.form-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    padding: 0 15px; /* Tambah padding untuk mobile */
+}
+
+/* Box besar */
+.form-box {
+    width: 85%;
+    max-width: 900px;
+    background: #fff;
+    padding: 25px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+
+    /* SCROLL DIHILANGKAN */
+    display: flex;
+    flex-direction: column;
+}
+
+.form-box h1 {
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+/* baris judul + back */
+.title-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid transparent;
+    background: transparent;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.back-link:focus {
+    outline: 2px solid rgba(107,33,168,0.18);
+    outline-offset: 2px;
+}
+
+/* Grid 2 kolom */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px; /* jarak antar kolom */
+    row-gap: 5px;    /* jarak antar baris (Nama ke NIP, dst) */
+}
+
+/* Form group */
+.form-group {
+    margin-bottom: 0; /* sudah diatur oleh row-gap */
+}
+
+/* Input & Select */
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-group input,
+.form-group select {
+    width: 90%;
+    padding: 8px 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #6b21a8;
+}
+
+/* Tombol */
+.form-actions {
+    text-align: right;
+    margin-top: 20px;
+    flex-shrink: 0; /* agar tombol tetap terlihat saat scroll */
+}
+
+.btn-submit {
+    background: linear-gradient(135deg, #e0465d, #7b2cbf);
+    color: #fff;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background: linear-gradient(135deg, #9d174d, #4c1d95);
+}
+
+/* ========== RESPONSIVE BREAKPOINTS ========== */
+
+/* Large Desktop (> 1200px) - Tetap 2 kolom optimal */
+@media screen and (min-width: 1201px) {
+    .form-box {
+        width: 80%;
+    }
+}
+
+/* Tablet Landscape & Desktop Kecil (992px - 1200px) */
+@media screen and (max-width: 1200px) {
+    .form-box {
+        width: 85%;
+    }
+    
+    .form-grid {
+        column-gap: 40px;
+    }
+}
+
+/* Tablet (768px - 991px) */
+@media screen and (max-width: 991px) {
+    .form-box {
+        width: 90%;
+        padding: 20px;
+    }
+    
+    .form-grid {
+        column-gap: 30px;
+    }
+    
+    .form-group input,
+    .form-group select {
+        width: 95%;
+    }
+}
+
+/* Laptop/Computer Separuh & Tablet Portrait (600px - 768px) */
+@media screen and (max-width: 768px) {
+    .form-container {
+        margin-top: 10px;
+        padding: 0 10px;
+    }
+    
+    .form-box {
+        width: 95%;
+        padding: 20px;
+    }
+    
+    .form-box h1 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    
+    .title-row {
+        gap: 10px;
+    }
+    
+    /* UBAH KE 1 KOLOM */
+    .form-grid {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+        row-gap: 10px;
+    }
+    
+    .form-group input,
+    .form-group select {
+        width: 100%;
+    }
+    
+    .form-actions {
+        text-align: center;
+        margin-top: 15px;
+    }
+}
+
+/* Mobile / HP (480px - 600px) */
+@media screen and (max-width: 600px) {
+    .form-container {
+        margin-top: 5px;
+        padding: 0 8px;
+    }
+    
+    .form-box {
+        width: 100%;
+        padding: 15px;
+        border-radius: 8px;
+    }
+    
+    .form-box h1 {
+        font-size: 17px;
+        padding-bottom: 8px;
+        margin-bottom: 12px;
+    }
+    
+    .title-row {
+        gap: 8px;
+        margin-bottom: 6px;
+    }
+    
+    .back-link {
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr;
+        row-gap: 8px;
+    }
+    
+    .form-group label {
+        font-size: 14px;
+        margin-bottom: 4px;
+    }
+    
+    .form-group input,
+    .form-group select {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+    
+    .btn-submit {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 15px;
+    }
+    
+    .form-actions {
+        text-align: center;
+        margin-top: 12px;
+    }
+}
+
+/* Extra Small Mobile (< 480px) */
+@media screen and (max-width: 480px) {
+    .form-container {
+        padding: 0 5px;
+    }
+    
+    .form-box {
+        padding: 12px;
+    }
+    
+    .form-box h1 {
+        font-size: 16px;
+        padding-bottom: 6px;
+        margin-bottom: 10px;
+    }
+    
+    .title-row {
+        gap: 6px;
+    }
+    
+    .back-link {
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+    }
+    
+    .form-grid {
+        row-gap: 6px;
+    }
+    
+    .form-group label {
+        font-size: 13px;
+    }
+    
+    .form-group input,
+    .form-group select {
+        padding: 8px;
+        font-size: 13px;
+    }
+    
+    .btn-submit {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+}
+
+/* Very Small Mobile (< 360px) */
+@media screen and (max-width: 360px) {
+    .form-box {
+        padding: 10px;
+    }
+    
+    .form-box h1 {
+        font-size: 15px;
+    }
+    
+    .form-group label {
+        font-size: 12px;
+    }
+    
+    .form-group input,
+    .form-group select {
+        font-size: 12px;
+        padding: 7px;
+    }
+}

@@ -1,0 +1,38 @@
+.btn-gold {
+    background: linear-gradient(145deg, rgba(55,42,100,0.95), rgba(61,56,146,0.92), rgba(32,45,77,0.9));
+    color:#fff!important; border:none; border-radius:8px; transition:0.3s;
+}
+.btn-gold:hover { transform:translateY(-2px); }
+
+.action-buttons-inline { display:flex; gap:8px; justify-content:center; }
+.btn-icon-edit, .btn-icon-delete { display:inline-flex; align-items:center; justify-content:center; width:32px; height:32px; border-radius:6px; border:none; cursor:pointer; transition:0.3s; }
+.btn-icon-edit { background: linear-gradient(145deg, rgba(55,42,100,0.95), rgba(61,56,146,0.92), rgba(32,45,77,0.9)); color:#fff; }
+.btn-icon-edit:hover { transform:scale(1.05); }
+.btn-icon-delete { background:#dc3545; color:#fff; }
+.btn-icon-delete:hover { background:#bb2d3b; transform:scale(1.05); }
+
+.btn-gradient { background: linear-gradient(135deg,#e0465d,#7b2cbf); color:#fff!important; border:none; border-radius:6px; padding:8px 20px; font-weight:600; transition:0.3s;}
+.btn-gradient:hover { transform:scale(1.03); }
+
+.table thead th { background-color:#2b2e77!important; color:white!important; text-align:center; vertical-align:middle; font-weight:600; }
+.table tbody tr:nth-child(even){background-color:#f8f9fa;}
+#warningModal .modal-header {
+    background: linear-gradient(135deg, #4a3294 0%, #401cab 100%);
+    color: white !important; /* 🔥 Paksa warna putih */
+}
+
+#warningModal .modal-header .modal-title {
+    color: white !important; /* 🔥 Paksa judul putih */
+}
+
+#warningModal .modal-header .btn-close {
+    filter: brightness(0) invert(1); /* Tombol close jadi putih */
+}
+
+#warningModal ul {
+    padding-left: 1.2rem;
+}
+
+#warningModal ul li {
+    margin-bottom: 0.5rem;
+}

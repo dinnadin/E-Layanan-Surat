@@ -1,0 +1,504 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* === KONTAINER UTAMA (KOTAK PUTIH) === */
+.surat-container {
+    width: 100%;
+    max-width: 1000px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(106, 74, 120, 0.15);
+    padding: 40px;
+    position: relative;
+    overflow: visible !important;
+    position: relative;
+    z-index: 1 !important;
+}
+
+.btn-close {
+    z-index: 2003 !important;
+    pointer-events: auto !important;
+}
+/* Dekorasi pojok kiri atas */
+.surat-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, rgba(123, 44, 191, 0.08), transparent);
+    border-radius: 0 0 100% 0;
+}
+
+/* Dekorasi pojok kanan bawah */
+.surat-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, transparent, rgba(224, 70, 93, 0.08));
+    border-radius: 100% 0 0 0;
+}
+
+/* === CARD FORM === */
+.card-form {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 100%;
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    box-sizing: border-box;
+}
+
+/* === JUDUL FORM === */
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 0 24px 0;
+    padding-bottom: 16px;
+    border-bottom: 3px solid rgba(123, 44, 191, 0.2);
+    color: #2b2230;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    letter-spacing: 0.5px;
+}
+
+.back-link {
+    color: #7b2cbf;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 4px 8px;
+    font-size: 1.3rem;
+    transition: all 0.2s ease;
+    border-radius: 6px;
+}
+
+.back-link:hover { 
+    background: rgba(123, 44, 191, 0.1);
+    transform: translateX(-2px);
+}
+
+.back-link:focus {
+    outline: 2px solid rgba(123, 44, 191, 0.3);
+    outline-offset: 2px;
+}
+
+/* === FIELD FORM (GRID 2 KOLOM) === */
+.field-row {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px !important;
+    align-items: start !important;
+    margin-bottom: 24px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Untuk baris yang hanya 1 kolom (Status Kepegawaian) */
+.field-row:last-of-type {
+    grid-template-columns: 1fr !important;
+}
+
+.field-group {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+}
+
+.field-label,
+label {
+    font-size: 0.95rem;
+    color: #3e3a3f;
+    margin-bottom: 8px;
+    font-weight: 600;
+    display: block;
+}
+
+.custom-input,
+.form-control,
+select,
+.form-select,
+textarea {
+    height: 44px !important;
+    padding: 10px 14px !important;
+    border-radius: 8px !important;
+    border: 2px solid #e8e4ec !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    background-color: #fafafa !important;
+    font-size: 0.95rem !important;
+    box-sizing: border-box !important;
+    transition: all 0.3s ease !important;
+}
+
+.custom-input:focus,
+.form-control:focus,
+select:focus,
+.form-select:focus,
+textarea:focus {
+    outline: none !important;
+    border-color: #7b2cbf !important;
+    background-color: #ffffff !important;
+    box-shadow: 0 0 0 4px rgba(123, 44, 191, 0.1) !important;
+    transform: translateY(-1px);
+}
+
+.custom-input:read-only,
+.form-control:read-only {
+    background-color: #f5f3f7 !important;
+    color: #6b6570 !important;
+    cursor: not-allowed !important;
+}
+
+textarea {
+    height: auto !important;
+    min-height: 90px !important;
+    resize: vertical !important;
+}
+
+
+.select2-container .select2-selection--single {
+    height: 44px !important;
+    border: 2px solid #e8e4ec !important;
+    border-radius: 8px !important;
+    background-color: #fafafa !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 40px !important;
+    padding-left: 14px !important;
+    color: #3e3a3f !important;
+    font-size: 0.95rem !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 42px !important;
+    right: 8px !important;
+}
+
+.select2-container--default.select2-container--focus .select2-selection--single {
+    border-color: #7b2cbf !important;
+    box-shadow: 0 0 0 4px rgba(123, 44, 191, 0.1) !important;
+}
+
+/* === ALERT === */
+.alert-danger {
+    background-color: #fee;
+    border: 2px solid #e0465d;
+    color: #b91c1c;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.alert-danger ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+/* === BUTTON === */
+.button-row {
+    display: flex !important;
+    justify-content: flex-end !important;
+    gap: 12px !important;
+    margin-top: 32px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.btn-reset,
+.btn-submit {
+    background: linear-gradient(135deg, #e0465d, #7b2cbf) !important;
+    color: #fff !important;
+    border-radius: 24px !important;
+    font-weight: 700 !important;
+    border: none !important;
+    padding: 12px 32px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    font-size: 0.95rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    box-shadow: 0 4px 12px rgba(123, 44, 191, 0.2) !important;
+}
+
+.btn-reset:hover,
+.btn-submit:hover {
+    background: linear-gradient(135deg, #9d174d, #4c1d95) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(123, 44, 191, 0.4) !important;
+}
+
+.btn-reset:active,
+.btn-submit:active { 
+    transform: translateY(0) !important;
+    box-shadow: 0 2px 8px rgba(123, 44, 191, 0.3) !important;
+}
+
+/* === RESPONSIVE: LAPTOP KECIL & TABLET (≤ 1024px) === */
+@media screen and (max-width: 1024px) {
+    .surat-wrapper {
+        padding: 24px 16px;
+    }
+
+    .surat-container {
+        padding: 28px;
+    }
+
+    .field-row {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+}
+
+/* === RESPONSIVE: MOBILE (≤ 768px) === */
+@media screen and (max-width: 768px) {
+    .surat-wrapper {
+        padding: 16px 12px;
+    }
+
+    .surat-container {
+        padding: 20px 16px;
+        border-radius: 8px;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+        padding-bottom: 12px;
+    }
+
+    .field-label,
+    label {
+        font-size: 0.9rem;
+    }
+
+    .custom-input,
+    .form-control,
+    select,
+    .form-select,
+    textarea {
+        font-size: 0.9rem !important;
+        height: 42px !important;
+    }
+
+    .select2-container .select2-selection--single {
+        height: 42px !important;
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+        line-height: 38px !important;
+    }
+
+    .button-row {
+        flex-direction: column !important;
+        gap: 10px !important;
+        margin-top: 24px !important;
+    }
+
+    .btn-reset,
+    .btn-submit {
+        width: 100% !important;
+        padding: 12px 24px !important;
+    }
+}
+
+/* === RESPONSIVE: MOBILE KECIL (≤ 480px) === */
+@media screen and (max-width: 480px) {
+    .surat-wrapper {
+        padding: 12px 8px;
+    }
+
+    .surat-container {
+        padding: 16px 12px;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+}
+
+/* === PRINT STYLES === */
+@media print {
+    .surat-wrapper {
+        padding: 0;
+        background: white;
+    }
+
+    .surat-container {
+        box-shadow: none;
+        border: 1px solid #ddd;
+        padding: 20px;
+    }
+
+    .button-row,
+    .back-link {
+        display: none;
+    }
+
+    .surat-container::before,
+    .surat-container::after {
+        display: none;
+    }
+}
+
+/* === FIX SCROLLBAR UNTUK LAYOUT === */
+html, body {
+    height: auto !important;
+    min-height: 100vh !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+}
+
+.content {
+    height: auto !important;
+    min-height: calc(100vh - 120px) !important;
+    overflow-y: visible !important;
+    overflow-x: hidden !important;
+}
+
+.sidebar {
+    height: 100vh !important;
+    min-height: 100vh !important;
+    overflow-y: auto !important;
+}
+
+.sidebar::-webkit-scrollbar { 
+    width: 8px; 
+}
+
+.sidebar::-webkit-scrollbar-track { 
+    background: rgba(106, 74, 120, 0.05); 
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: rgba(106, 74, 120, 0.3);
+    border-radius: 8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(106, 74, 120, 0.5);
+}
+
+/* === FORM GRID (override yang memastikan 2 kolom) === */
+.form-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important; /* dua kolom */
+    gap: 20px !important; /* jarak antar kolom */
+    margin-bottom: 25px !important;
+}
+
+.form-item.full {
+    grid-column: span 2 !important; /* untuk elemen yang lebar penuh (misal status kepegawaian) */
+}
+
+.section-title {
+    margin: 20px 0 10px;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 2px solid #e5e5e5;
+    padding-bottom: 5px;
+}
+
+/* pastikan button row konsisten */
+.button-row {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+/* responsive untuk form-grid */
+@media screen and (max-width: 1024px) {
+    .form-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+/* GANTI DENGAN INI */
+.select2-container {
+    z-index: 1040 !important; /* di bawah modal */
+}
+
+.select2-dropdown {
+    z-index: 1060 !important; /* di atas modal backdrop, tapi di bawah modal content */
+}
+
+/* ========================================
+   FINAL FIX: MODAL BACKDROP BLOCKING ISSUE
+   ======================================== */
+
+/* Hapus pointer-events dari backdrop */
+.modal-backdrop {
+    z-index: 1040 !important;
+    pointer-events: none !important; /* KUNCI: backdrop tidak tangkap klik */
+}
+
+/* Modal berada di atas backdrop */
+.modal {
+    z-index: 1050 !important;
+    pointer-events: none !important; /* Modal container tidak tangkap klik */
+}
+
+/* HANYA modal-dialog yang tangkap klik */
+.modal-dialog {
+    pointer-events: auto !important; /* Dialog tangkap klik */
+    z-index: 1051 !important;
+    position: relative;
+}
+
+/* Content dan semua isinya bisa diklik */
+.modal-content {
+    pointer-events: auto !important;
+    position: relative;
+    z-index: 1052 !important;
+}
+
+.modal-header,
+.modal-body,
+.modal-footer {
+    pointer-events: auto !important;
+}
+
+/* Button dengan prioritas tertinggi */
+.modal-content .btn,
+.modal-content .btn-close,
+.modal-content button {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    position: relative;
+    z-index: 1055 !important;
+}
+
+/* Hover untuk konfirmasi button aktif */
+.modal-content .btn:hover {
+    opacity: 0.9 !important;
+}
+
+/* Paksa select2 tetap di bawah */
+.select2-container,
+.select2-dropdown {
+    z-index: 1000 !important;
+}
+
+body.modal-open .select2-container--open {
+    z-index: 1000 !important;
+}

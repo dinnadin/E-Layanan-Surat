@@ -1,0 +1,582 @@
+/* ============================================================
+   BASE STYLES
+============================================================ */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+#jenis_permohonan {
+    pointer-events: none;
+    background-color: #e9ecef;
+    cursor: not-allowed;
+}
+
+.surat-container {
+    padding: 20px 24px 24px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.card-form {
+    width: 100%;
+    max-width: 980px;
+    background-color: #f5f5f5;
+    padding: 24px 28px;
+    border-radius: 8px;
+    border-top: 6px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* ============================================================
+   TYPOGRAPHY & HEADINGS
+============================================================ */
+.card-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 0 0 18px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(106, 74, 120, 0.12);
+    color: #2b2230;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ============================================================
+   LINKS
+============================================================ */
+.back-link {
+    color: inherit;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding-right: 6px;
+    font-size: 1.05rem;
+    transition: opacity 0.2s ease;
+}
+
+.back-link:hover {
+    opacity: 0.7;
+}
+
+.back-link:focus {
+    outline: 2px solid rgba(106, 74, 120, 0.18);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* ============================================================
+   FORM LAYOUT (DUA KOLOM DI DESKTOP, SATU KOLOM DI HP)
+============================================================ */
+.form-row,
+.field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 16px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.form-group,
+.field-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* ============================================================
+   FORM LABELS
+============================================================ */
+.field-label,
+.form-group label {
+    font-size: 0.95rem;
+    color: #3e3a3f;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+/* ============================================================
+   FORM INPUTS (DESKTOP)
+============================================================ */
+.custom-input,
+.form-group input,
+.form-group select,
+.form-group textarea,
+input[type="text"],
+input[type="date"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    height: 48px !important;
+    padding: 12px 16px !important;
+    border-radius: 6px !important;
+    border: 1px solid #ddd6df !important;
+    width: 100% !important;
+    background-color: #ffffff !important;
+    font-size: 0.95rem !important;
+    transition: border-color 0.2s ease;
+    margin: 0 !important;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.custom-input:focus,
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #7b2cbf;
+    box-shadow: 0 0 0 3px rgba(123, 44, 191, 0.1);
+}
+
+textarea,
+.form-group textarea {
+    height: auto !important;
+    min-height: 80px !important;
+    resize: vertical;
+}
+
+/* ============================================================
+   BUTTONS
+============================================================ */
+.button-row {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 24px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.btn-reset,
+.btn-submit {
+    background: linear-gradient(135deg, #e0465d, #7b2cbf);
+    color: #fff;
+    border-radius: 20px;
+    font-weight: 600;
+    border: none;
+    padding: 10px 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.btn-reset:hover,
+.btn-submit:hover {
+    background: linear-gradient(135deg, #9d174d, #4c1d95);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(123, 44, 191, 0.3);
+}
+
+.btn-reset:active,
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+/* ============================================================
+   ALERTS
+============================================================ */
+.custom-alert {
+    position: fixed;
+    top: 65px;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 400px;
+    max-width: 800px;
+    padding: 10px 16px;
+    font-size: 0.9rem;
+    text-align: center;
+    z-index: 9999;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================================================
+   GLOBAL FIXES - HILANGKAN SCROLL HORIZONTAL
+============================================================ */
+html, body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+}
+
+* {
+    max-width: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 12px;
+    padding-right: 12px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.select2-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+}
+
+input, select, textarea, button {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* ============================================================ */
+/* RESPONSIVE UNTUK TABLET (max-width: 768px) */
+/* ============================================================ */
+@media (max-width: 768px) {
+    
+    /* Form row jadi 1 kolom */
+    .form-row,
+    .field-row {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+        margin-bottom: 10px !important;
+        width: 100% !important;
+    }
+
+    /* Container responsive */
+    .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        margin: 0 auto !important;
+        box-sizing: border-box;
+        overflow-x: hidden !important;
+    }
+
+    .surat-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 10px !important;
+        overflow-x: hidden !important;
+    }
+
+    .card-form {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 14px !important;
+        box-sizing: border-box;
+        margin: 0 !important;
+    }
+
+    .card-title {
+        font-size: 1rem !important;
+        margin-bottom: 12px !important;
+        padding-bottom: 8px !important;
+    }
+
+    /* Form group compact */
+    .form-group,
+    .field-group {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 6px !important;
+    }
+
+    /* Label lebih kecil */
+    .field-label,
+    .form-group label,
+    label {
+        font-size: 0.88rem !important;
+        margin-bottom: 4px !important;
+        font-weight: 500;
+    }
+
+    /* Input & Select lebih kecil */
+    input, 
+    select, 
+    input[type="text"],
+    input[type="date"],
+    input[type="password"],
+    input[type="email"],
+    input[type="number"],
+    .form-group input,
+    .form-group select,
+    .form-control,
+    .custom-input {
+        height: 38px !important;
+        min-height: 38px !important;
+        max-height: 38px !important;
+        padding: 7px 10px !important;
+        font-size: 0.88rem !important;
+        line-height: 1.3 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box;
+    }
+    
+    /* Textarea lebih pendek - OVERRIDE rows attribute */
+    textarea,
+    textarea[rows],
+    textarea[rows="3"],
+    textarea[rows="4"],
+    .form-group textarea,
+    textarea.form-control,
+    textarea.custom-input,
+    #alamat_cuti {
+        height: 55px !important;
+        min-height: 55px !important;
+        max-height: 90px !important;
+        padding: 7px 10px !important;
+        font-size: 0.88rem !important;
+        line-height: 1.4 !important;
+        overflow-y: auto !important;
+        resize: vertical !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box;
+    }
+    
+    /* Select2 dropdown */
+    .select2-container,
+    .select2-container--default,
+    span.select2 {
+        height: 38px !important;
+        max-height: 38px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .select2-container .select2-selection--single {
+        height: 38px !important;
+        padding: 7px 10px !important;
+    }
+    
+    .select2-container .select2-selection--single .select2-selection__rendered {
+        line-height: 22px !important;
+        padding-left: 0 !important;
+        font-size: 0.88rem !important;
+    }
+    
+    .select2-container .select2-selection--single .select2-selection__arrow {
+        height: 36px !important;
+    }
+
+    /* Tombol full width */
+    .button-row {
+        flex-direction: column !important;
+        gap: 10px !important;
+        margin-top: 16px !important;
+    }
+
+    .btn-reset,
+    .btn-submit {
+        width: 100% !important;
+        padding: 11px !important;
+        font-size: 0.9rem !important;
+    }
+
+    /* Alert responsive */
+    .custom-alert {
+        min-width: auto !important;
+        max-width: 90% !important;
+        width: 90% !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        top: 20px !important;
+        padding: 10px 12px !important;
+        font-size: 0.85rem !important;
+    }
+
+    /* Back link */
+    .back-link {
+        font-size: 1rem !important;
+        padding-right: 4px !important;
+    }
+}
+
+/* ============================================================ */
+/* RESPONSIVE UNTUK HP KECIL (max-width: 480px) */
+/* ============================================================ */
+@media (max-width: 480px) {
+    
+    .surat-container {
+        padding: 8px !important;
+    }
+
+    .card-form {
+        padding: 12px !important;
+        border-radius: 6px !important;
+    }
+
+    .card-title {
+        font-size: 0.95rem !important;
+        margin-bottom: 10px !important;
+    }
+
+    /* Form row gap lebih kecil */
+    .form-row,
+    .field-row {
+        gap: 6px !important;
+        margin-bottom: 6px !important;
+    }
+
+    /* Label extra kecil */
+    .form-group label,
+    .field-label,
+    label {
+        font-size: 0.85rem !important;
+        margin-bottom: 3px !important;
+    }
+
+    /* Input & Select extra kecil */
+    input, 
+    select,
+    input[type="text"],
+    input[type="date"],
+    input[type="password"],
+    input[type="email"],
+    input[type="number"],
+    .form-group input,
+    .form-group select,
+    .custom-input {
+        height: 36px !important;
+        min-height: 36px !important;
+        max-height: 36px !important;
+        padding: 6px 8px !important;
+        font-size: 0.85rem !important;
+    }
+    
+    /* Textarea extra kecil */
+    textarea,
+    textarea[rows],
+    textarea[rows="3"],
+    .form-group textarea,
+    #alamat_cuti {
+        height: 50px !important;
+        min-height: 50px !important;
+        max-height: 80px !important;
+        padding: 6px 8px !important;
+        font-size: 0.85rem !important;
+        line-height: 1.3 !important;
+    }
+
+    /* Select2 extra kecil */
+    .select2-container .select2-selection--single {
+        height: 36px !important;
+        padding: 6px 8px !important;
+    }
+
+    .select2-container .select2-selection--single .select2-selection__rendered {
+        line-height: 22px !important;
+        font-size: 0.85rem !important;
+    }
+
+    .select2-container .select2-selection--single .select2-selection__arrow {
+        height: 34px !important;
+    }
+
+    /* Tombol lebih kecil */
+    .btn-reset,
+    .btn-submit {
+        padding: 10px !important;
+        font-size: 0.88rem !important;
+    }
+}
+/* Custom styling untuk SweetAlert2 Modal */
+.swal-custom-popup {
+    border-radius: 15px !important;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2) !important;
+}
+
+.swal-html-custom {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.swal2-icon.swal2-warning {
+    border-color: #ffc107 !important;
+    color: #ffc107 !important;
+}
+
+/* Animasi shake untuk icon warning */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+.swal2-icon.swal2-warning {
+    animation: shake 0.5s;
+}
+
+/* Styling untuk tombol confirm */
+.swal2-confirm {
+    padding: 10px 30px !important;
+    font-weight: 600 !important;
+    font-size: 15px !important;
+    border-radius: 8px !important;
+    transition: all 0.3s ease !important;
+}
+
+.swal2-confirm:hover {
+    transform: scale(1.05) !important;
+    box-shadow: 0 5px 15px rgba(220, 53, 69, 0.3) !important;
+}
+/* Custom SweetAlert Compact Styles */
+.swal-compact-popup {
+    border-radius: 12px !important;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15) !important;
+    max-height: 90vh !important;
+}
+
+.swal-compact-html {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+}
+
+.swal-compact-button {
+    padding: 10px 30px !important;
+    font-weight: 600 !important;
+    font-size: 15px !important;
+    border-radius: 6px !important;
+    transition: all 0.2s ease !important;
+}
+
+.swal-compact-button:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3) !important;
+}
+
+/* Hilangkan scroll */
+.swal2-popup {
+    overflow: visible !important;
+}
+
+.swal2-html-container {
+    overflow: visible !important;
+    max-height: none !important;
+}

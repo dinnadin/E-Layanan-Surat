@@ -1,0 +1,406 @@
+/* ============================================================
+   BASE STYLES - ULTIMATE MOBILE FIX
+============================================================ */
+* {
+    box-sizing: border-box !important;
+}
+
+html {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.content {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+}
+
+.surat-container {
+    padding: 15px !important;
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+    overflow: visible !important;
+}
+
+.card-form {
+    width: 100% !important;
+    max-width: 100% !important;
+    background-color: #f5f5f5;
+    padding: 20px !important;
+    border-radius: 8px;
+    border-top: 6px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    overflow: visible !important;
+}
+
+/* ============================================================
+   TYPOGRAPHY & HEADINGS
+============================================================ */
+
+.card-title {
+    font-size: 1rem !important;
+    font-weight: 700;
+    margin: 0 0 15px 0 !important;
+    padding: 0 0 10px 0 !important;
+    border-bottom: 2px solid rgba(106, 74, 120, 0.12);
+    color: #2b2230;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.back-link {
+    color: inherit;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 1rem !important;
+    transition: opacity 0.2s ease;
+}
+
+.back-link:hover {
+    opacity: 0.7;
+}
+
+/* ============================================================
+   FORM LAYOUT
+============================================================ */
+
+.field-row,
+.form-row {
+    display: flex !important;
+    gap: 15px !important;
+    width: 100% !important;
+    margin: 0 0 15px 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+.field-group,
+.form-group {
+    flex: 1 !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+}
+
+/* ============================================================
+   FORM LABELS
+============================================================ */
+
+.field-label,
+.form-group label {
+    font-size: 0.85rem !important;
+    color: #3e3a3f;
+    margin: 0 0 6px 0 !important;
+    padding: 0 !important;
+    font-weight: 500;
+    display: block !important;
+}
+
+/* ============================================================
+   FORM INPUTS
+============================================================ */
+
+.custom-input,
+.form-group input,
+.form-group select,
+.form-group textarea,
+input[type="text"],
+input[type="date"],
+input[type="time"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    height: 46px !important;
+    padding: 10px 14px !important;
+    border-radius: 6px !important;
+    border: 1px solid #ddd6df !important;
+    width: 100% !important;
+    background-color: #ffffff !important;
+    font-size: 0.95rem !important;
+    box-sizing: border-box !important;
+    transition: border-color 0.2s ease;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+}
+
+.custom-input:focus,
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none !important;
+    border-color: #7b2cbf !important;
+    box-shadow: 0 0 0 3px rgba(123, 44, 191, 0.1) !important;
+}
+
+textarea,
+.form-group textarea {
+    height: auto !important;
+    min-height: 80px !important;
+    resize: vertical !important;
+}
+
+/* ============================================================
+   SELECT2 STYLING - FIXED DROPDOWN
+============================================================ */
+
+.select2-container {
+    width: 100% !important;
+    display: block !important;
+    box-sizing: border-box !important;
+    z-index: 1 !important;
+}
+
+.select2-container--default .select2-selection--single {
+    height: 46px !important;
+    border: 1px solid #ddd6df !important;
+    border-radius: 6px !important;
+    padding: 8px 12px !important;
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    background-color: #ffffff !important;
+}
+
+.select2-container--default .select2-selection--single:focus,
+.select2-container--default.select2-container--open .select2-selection--single {
+    border-color: #2a33be !important;
+    box-shadow: 0 0 0 3px rgba(123, 44, 191, 0.1) !important;
+}
+
+.select2-selection__rendered {
+    line-height: 28px !important;
+    font-size: 0.95rem !important;
+    color: #333 !important;
+}
+
+.select2-selection__arrow {
+    height: 44px !important;
+}
+
+/* ✅ FIX DROPDOWN POSITIONING */
+.select2-container--open {
+    z-index: 9999 !important;
+}
+
+.select2-dropdown {
+    border: 1px solid #ddd6df !important;
+    border-radius: 6px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    z-index: 9999 !important;
+    background-color: #ffffff !important;
+    margin-top: 2px !important;
+}
+
+.select2-results__option {
+    padding: 10px 14px !important;
+    font-size: 0.9rem !important;
+}
+
+.select2-results__option--highlighted[aria-selected] {
+    background-color: #2a33be !important;
+    color: white !important;
+}
+
+/* ✅ PREVENT OVERFLOW ON PARENT */
+.field-group:has(.select2-container) {
+    overflow: visible !important;
+}
+
+/* ============================================================
+   BUTTONS
+============================================================ */
+
+.button-row {
+    display: flex !important;
+    justify-content: flex-end !important;
+    gap: 10px !important;
+    margin: 20px 0 0 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+}
+
+.btn-reset,
+.btn-submit {
+    background: linear-gradient(135deg, #e0465d, #7b2cbf) !important;
+    color: #fff !important;
+    border-radius: 20px !important;
+    font-weight: 600 !important;
+    border: none !important;
+    padding: 12px 24px !important;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem !important;
+    min-width: 120px !important;
+}
+
+.btn-reset:hover,
+.btn-submit:hover {
+    background: linear-gradient(135deg, #9d174d, #4c1d95) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(123, 44, 191, 0.3);
+}
+
+.btn-reset:active,
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+/* ============================================================
+   RESPONSIVE - MOBILE (≤768px)
+============================================================ */
+
+@media (max-width: 768px) {
+    .surat-container {
+        padding: 10px !important;
+    }
+
+    .card-form {
+        padding: 15px !important;
+    }
+
+    .card-title {
+        font-size: 0.9rem !important;
+        margin-bottom: 12px !important;
+    }
+
+    .field-row,
+    .form-row {
+        flex-direction: column !important;
+        gap: 10px !important;
+    }
+
+    .field-group,
+    .form-group {
+        width: 100% !important;
+    }
+
+    .custom-input,
+    .form-group input,
+    .form-group select,
+    .form-group textarea,
+    input,
+    select,
+    textarea {
+        font-size: 16px !important;
+    }
+
+    .button-row {
+        flex-direction: column !important;
+        gap: 8px !important;
+    }
+
+    .btn-reset,
+    .btn-submit {
+        width: 100% !important;
+    }
+
+    /* ✅ SELECT2 MOBILE FIX */
+    .select2-dropdown {
+        max-width: calc(100vw - 30px) !important;
+        left: 15px !important;
+        right: 15px !important;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE - TABLET (769px - 992px)
+============================================================ */
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .card-form {
+        max-width: 750px !important;
+        margin: 0 auto !important;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE - DESKTOP (≥993px)
+============================================================ */
+
+@media (min-width: 993px) {
+    .card-form {
+        max-width: 900px !important;
+        margin: 0 auto !important;
+        padding: 30px !important;
+    }
+
+    .card-title {
+        font-size: 1.1rem !important;
+        margin-bottom: 20px !important;
+    }
+}
+
+/* ============================================================
+   MODAL STYLES
+============================================================ */
+
+.modal {
+    z-index: 10000 !important;
+}
+
+.modal-backdrop {
+    z-index: 9999 !important;
+}
+
+/* ============================================================
+   HR SEPARATOR
+============================================================ */
+
+hr {
+    border: none !important;
+    border-top: 1px solid #e0e0e0 !important;
+    margin: 20px 0 !important;
+}
+
+/* ============================================================
+   PRINT STYLES
+============================================================ */
+
+@media print {
+    .surat-container {
+        padding: 0 !important;
+    }
+
+    .card-form {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+
+    .button-row,
+    .back-link {
+        display: none !important;
+    }
+}

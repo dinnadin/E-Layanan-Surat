@@ -1,0 +1,331 @@
+ /* copy style dari surataktif biar konsisten */
+       .surat-page {
+    background: transparent;
+    padding: 18px 0 60px;
+    min-height: 72vh;
+    font-family: "Segoe UI","Helvetica Neue",Arial,sans-serif;
+    overflow-y: auto; /* ✅ biar seluruh halaman bisa discroll */
+}
+
+.surat-card {
+    background: #fff; /* biar ada kotakan putih */
+    width: 86%;
+    margin: 0 auto;
+    padding: 28px 36px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.surat-box {
+    background: transparent;
+    padding: 26px 30px;
+    border-radius: 2px;
+    border-top: 8px solid rgba(0,0,0,0.02);
+    /* ❌ jangan pakai max-height dan overflow hidden */
+    max-height: none;
+    overflow-y: visible;
+}
+
+        .surat-header {
+            display:flex;align-items:center;gap:12px;margin-bottom:10px;
+        }
+        .surat-back {font-size:20px;text-decoration:none;color:#222;}
+        .surat-title {font-size:20px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#111;}
+        .separator {height:2px;background:linear-gradient(to right,rgba(0,0,0,0.15),rgba(0,0,0,0.05));margin:14px 0 20px;border-radius:2px;}
+        form.surat-form {display:grid;grid-template-columns:1fr;gap:18px;}
+        .row-2 {display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+        .row-1 {display:block;}
+        label.surat-label {font-size:12px;font-weight:600;margin-bottom:6px;color:#222;}
+        input.surat-input,select.surat-input,textarea.surat-input {
+            width:100%;padding:9px 10px;border:1px solid #cfc6c6;border-radius:4px;
+            background:#fff;font-size:14px;outline:none;box-sizing:border-box;
+        }
+        textarea.surat-input {min-height:80px;}
+        input.surat-input[readonly]{background:#faf7f7;color:#333;}
+        .field {display:flex;flex-direction:column;}
+        .form-actions {display:flex;justify-content:flex-end;gap:8px;margin-top:6px;}
+
+       .btn-simpan {
+    padding: 5px 15px;
+    border-radius: 20px;
+           background: linear-gradient(135deg, #e0465d, #7b2cbf);
+    color: #fff;
+    border: 1px solid #cfcfcf;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-simpan:hover {
+    background: linear-gradient(135deg, #9d174d, #4c1d95);
+}
+        @media(max-width:900px){.surat-card{width:95%;padding:16px}.row-2{grid-template-columns:1fr}.surat-title{font-size:18px}}
+
+        @keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#modalKonfirmasiTTD {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+/* ==========================================
+   MODAL KONFIRMASI TTD - STYLES
+   ========================================== */
+
+/* Modal Overlay */
+#modalKonfirmasiTTD {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 999999;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    overflow-y: auto;
+}
+
+/* Modal Content Container */
+.modal-content-ttd {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    max-width: 600px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+    animation: slideDown 0.3s ease-out;
+    margin: 20px;
+}
+
+/* Modal Header */
+.modal-header-ttd {
+    color: #dc3545;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Modal Description */
+.modal-description-ttd {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.modal-description-ttd strong {
+    color: #dc3545;
+}
+
+/* Image Comparison Container */
+.ttd-comparison-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Image Box */
+.ttd-image-box {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+}
+
+.ttd-image-label {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+    font-size: 14px;
+}
+
+/* TTD Images */
+#oldTTDPreview,
+#newTTDPreview {
+    max-width: 100%;
+    max-height: 150px;
+    height: auto;
+    border-radius: 8px;
+    padding: 10px;
+    background: #f8f9fa;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#oldTTDPreview {
+    border: 2px solid #6c757d;
+}
+
+#newTTDPreview {
+    border: 2px solid #28a745;
+}
+
+/* Arrow Separator */
+.ttd-arrow-separator {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    color: #dc3545;
+}
+
+/* Modal Actions Container */
+.modal-actions-ttd {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+/* Modal Buttons */
+#btnYaUbah,
+#btnTidakUbah {
+    flex: 1;
+    min-width: 150px;
+    padding: 12px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#btnYaUbah {
+    background: linear-gradient(135deg, #28a745, #20c997);
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
+}
+
+#btnYaUbah:hover {
+    transform: scale(1.05);
+}
+
+#btnTidakUbah {
+    background: linear-gradient(135deg, #dc3545, #c82333);
+    box-shadow: 0 4px 15px rgba(220, 53, 69, 0.4);
+}
+
+#btnTidakUbah:hover {
+    transform: scale(1.05);
+}
+
+#btnYaUbah:active,
+#btnTidakUbah:active {
+    transform: scale(0.98);
+}
+
+/* Animation */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design for Modal */
+@media (max-width: 768px) {
+    .modal-content-ttd {
+        padding: 20px;
+        width: 95%;
+    }
+    
+    .modal-header-ttd {
+        font-size: 18px;
+    }
+    
+    .ttd-comparison-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .ttd-arrow-separator {
+        transform: rotate(90deg);
+        margin: 10px 0;
+    }
+    
+    .modal-actions-ttd {
+        flex-direction: column;
+    }
+    
+    #btnYaUbah,
+    #btnTidakUbah {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content-ttd {
+        padding: 15px;
+        margin: 10px;
+    }
+    
+    .modal-header-ttd {
+        font-size: 16px;
+    }
+    
+    .modal-description-ttd {
+        font-size: 13px;
+    }
+    
+    .ttd-image-label {
+        font-size: 13px;
+    }
+    
+    #oldTTDPreview,
+    #newTTDPreview {
+        max-height: 120px;
+    }
+}
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.alert-success {
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+}
+
+.alert-warning {
+    background: #fff3cd;
+    border: 1px solid #ffeeba;
+    color: #856404;
+}
+
+.alert-danger {
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
+
+.btn-setuju:hover {
+    background: #218838 !important;
+}
+
+.btn-tolak:hover {
+    background: #c82333 !important;
+}
