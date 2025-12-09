@@ -2,7 +2,7 @@
 Sistem E-Layanan Surat Kepegawaian berbasis Laravel.
 
 ## 👥 Kelompok Pengembang
-- NUR Halimatus
+- NUR HALIMATUS
 - DIAN NOVITA PUTRANTO
 - IIT
 - AGRESYA IMELDA
