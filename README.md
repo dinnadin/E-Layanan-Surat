@@ -11,7 +11,7 @@ Sistem E-Layanan Surat Kepegawaian berbasis Laravel.
 
 E-Layanan Surat adalah sebuah aplikasi berbasis web yang dirancang untuk mempermudah proses pengajuan, pengelolaan, dan penerbitan surat secara digital. Melalui aplikasi ini, pengguna dapat mengajukan permohonan surat secara online tanpa harus datang langsung, serta memantau status dan hasil surat melalui fitur Riwayat Surat. Aplikasi ini membantu
 
-DOWNLOAD FILE APLIKASI 
+INGIN LIHAT TAMPILAN , KLIK DISINI
 https://drive.google.com/drive/folders/1-WY5Zyj7al_6D4A-FbBZWT33bqvSQVhF?usp=sharing 
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
