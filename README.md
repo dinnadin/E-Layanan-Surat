@@ -14,7 +14,7 @@ INGIN LIHAT TAMPILAN , KLIK DISINI
 https://drive.google.com/drive/folders/1-WY5Zyj7al_6D4A-FbBZWT33bqvSQVhF?usp=sharing 
 
 Poster 
-![Poster]([https://raw.githubusercontent.com/dinnadin/E-Layanan-Surat/main/assets/POSTER%20E-LAYANAN%20SURAT.png](https://github.com/dinnadin/E-Layanan-Surat/blob/main/POSTER%20E-LAYANAN%20SURAT.png)) 
+![Poster]([[https://raw.githubusercontent.com/dinnadin/E-Layanan-Surat/main/assets/POSTER%20E-LAYANAN%20SURAT.png])
 
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
